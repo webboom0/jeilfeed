@@ -103,7 +103,7 @@
 .gnb .depth-2 {
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: 1px;
   display: none;
   z-index: 11;
   font-size: 1em;
