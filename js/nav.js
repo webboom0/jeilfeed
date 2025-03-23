@@ -9,6 +9,7 @@ const gnb = {
   maxHeight: 0,
   dep2WdArr: new Array(),
   dep2HeightArr: new Array(),
+  gnbWidth: 1200,
   init: function (el) {
     let $gnbEl = $(this.gnbEl);
 
@@ -102,7 +103,7 @@ const gnb = {
       $(gnb.gnbEl).append('<div class="panel"></div>');
     }
     const length = $gnbEl.find(gnb.depth[1]).length;
-    const wd = 1200 / length;
+    const wd = gnb.gnbWidth / length;
     console.log(length);
     console.log(wd);
     // 2차메뉴 max 높이,가로 체크 후 위치, 사이즈 조절
