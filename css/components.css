@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* select-form */
+.select-form {
+  position: relative;
+  z-index: 1;
+}
+
+.select-form.active {
+  z-index: 2;
+}
+
+.select-form .selected-area {
+  height: 3em;
+  background-color: #fff;
+  border: solid 1px var(--border-color);
+  border-radius: var(--form-rd1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.select-form .selected-area>* {
+  cursor: pointer;
+}
+
+.select-form .selected-area::after {
+  content: "\e942";
+  font-family: 'xeicon';
+  padding: 0 1rem;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.select-form.active .selected-area::after {
+  transform: rotate(180deg);
+}
+
+.select-form .selected-area input[type=text] {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  cursor: pointer;
+}
+
+.select-form .option {
+  background-color: #fff;
+  border: solid 1px var(--border-color);
+  padding: 1rem;
+  border-radius: var(--form-rd1);
+  margin-top: -1px;
+  font-size: .95em;
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.select-form .option .opt-item {
+  display: block;
+  padding: .5rem;
+  width: 100%;
+  border-radius: var(--form-rd1);
+}
+
+.select-form .option .opt-item:hover {
+  color: inherit;
+  background-color: var(--bg-hover);
+}
+
+.select-form.active .option {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.select-form.active .option::-webkit-scrollbar {
+  width: 10px;
+}
+
+.select-form.active .option::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.select-form.active .option::-webkit-scrollbar-track {
+  background-color: #efefef;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}

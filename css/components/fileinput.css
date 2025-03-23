@@ -1,0 +1,158 @@
+.file-input {
+  cursor: pointer;
+  border: var(--border) solid transparent;
+  background-color: var(--color-base-100);
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  /* align-middle: middle; */
+  user-select: none;
+  width: clamp(3em, 20em, 100%);
+  height: var(--size);
+  padding-inline-end: 0.75em;
+  font-size: 0.875em;
+  font-family: var(--fontfamily);
+  line-height: 2;
+  border-start-start-radius: var(--join-ss, var(--radius-field));
+  border-start-end-radius: var(--join-se, var(--radius-field));
+  border-end-start-radius: var(--join-es, var(--radius-field));
+  border-end-end-radius: var(--join-ee, var(--radius-field));
+  border-color: var(--input-color);
+  box-shadow: 0 0.0625em
+      color-mix(
+        in oklab,
+        var(--input-color) calc(var(--depth) * 10%),
+        transparent
+      )
+      inset,
+    0 -0.0625em rgba(255, 255, 255, calc(var(--depth) * 0.1)) inset;
+  --size: calc(var(--size-field) * 10);
+  --input-color: color-mix(
+    in oklab,
+    var(--color-base-content) 20%,
+    transparent
+  );
+
+  /* 버튼 관련 변수들 */
+  --btn-color: var(--color-base-200);
+  --btn-bg: var(--btn-color);
+  --btn-fg: var(--color-base-content);
+  --btn-border: color-mix(in oklab, var(--btn-bg), #000 5%);
+  --btn-shadow: 0 0.1875em 0.125em -0.125em color-mix(in oklab, var(--btn-bg)
+          30%, transparent),
+    0 0.25em 0.1875em -0.125em color-mix(in oklab, var(--btn-bg) 30%, transparent);
+  --btn-noise: var(--fx-noise);
+  --noise: 1;
+  --fx-noise: url("data:image/svg+xml,..."); /* 노이즈 텍스처 SVG */
+}
+
+.file-input::file-selector-button {
+  margin-right: 0.25em;
+  cursor: pointer;
+  padding: 0 0.25em;
+  user-select: none;
+  height: calc(100% + var(--border) * 2);
+  margin-block: calc(var(--border) * -1);
+  margin-inline-start: calc(var(--border) * -1);
+  font-size: 0.875em;
+  color: var(--btn-fg);
+  border-width: var(--border);
+  border-style: solid;
+  border-color: var(--btn-border);
+  border-start-start-radius: calc(
+    var(--join-ss, var(--radius-field) - var(--border))
+  );
+  border-end-start-radius: calc(
+    var(--join-es, var(--radius-field) - var(--border))
+  );
+  font-weight: 600;
+  background-color: var(--btn-bg);
+  background-size: calc(var(--noise) * 100%);
+  background-image: var(--btn-noise);
+  text-shadow: 0 0.03125em rgba(255, 255, 255, calc(var(--depth) * 0.15));
+  box-shadow: var(--btn-shadow);
+}
+
+/* 크기 변형 */
+.file-input-sm {
+  --size: calc(var(--size-field) * 8);
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+
+.file-input-md {
+  --size: calc(var(--size-field) * 10);
+  font-size: 0.875em;
+  line-height: 2;
+}
+
+.file-input-lg {
+  --size: calc(var(--size-field) * 12);
+  font-size: 1.125em;
+  line-height: 2.5;
+}
+/* 색상 변형 클래스들 */
+.file-input-neutral {
+  --btn-color: var(--color-neutral);
+}
+.file-input-neutral::file-selector-button {
+  color: var(--color-neutral-content);
+}
+
+/* 색상 변형 */
+.file-input-neutral {
+  --input-color: var(--color-neutral);
+}
+
+.file-input-primary {
+  --input-color: var(--color-primary);
+}
+
+.file-input-secondary {
+  --input-color: var(--color-secondary);
+}
+
+.file-input-accent {
+  --input-color: var(--color-accent);
+}
+
+.file-input-info {
+  --input-color: var(--color-info);
+}
+
+.file-input-success {
+  --input-color: var(--color-success);
+}
+
+.file-input-warning {
+  --input-color: var(--color-warning);
+}
+
+.file-input-error {
+  --input-color: var(--color-error);
+}
+
+/* 고스트 스타일 */
+.file-input-ghost {
+  background-color: transparent;
+  transition: background-color 0.2s;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.file-input-ghost::file-selector-button {
+  margin-left: 0;
+  margin-right: 0.25em;
+  height: 100%;
+  padding: 0 0.25em;
+}
+
+/* 비활성화 상태 */
+.file-input:disabled,
+.file-input[disabled] {
+  border-color: var(--color-base-200);
+  background-color: var(--color-base-200);
+  cursor: not-allowed;
+  box-shadow: none;
+  color: color-mix(in oklch, var(--color-base-content) 20%, transparent);
+}

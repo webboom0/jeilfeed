@@ -1,0 +1,139 @@
+:root {
+  --bordercolor: rgba(54, 54, 54, 0.2);
+}
+
+.table {
+  font-size: 1em;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border-radius: 0.5em;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+.table.table-center {
+  text-align: center;
+}
+
+.table caption {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+[dir="rtl"] .table {
+  text-align: right;
+}
+
+.table.table-hover tr:hover,
+.table.table-hover tr:nth-child(even):hover {
+  background-color: var(--color-base-200);
+}
+
+.table th,
+.table td {
+  padding: 0.6em 1em;
+  vertical-align: middle;
+  border-bottom: var(--border) solid var(--bordercolor);
+  border-right: var(--border) solid var(--bordercolor);
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none;
+}
+
+.table thead,
+.table tfoot {
+  white-space: nowrap;
+  border-top: var(--border) solid var(--bordercolor);
+}
+
+.table thead th,
+.table tfoot th,
+.table tfoot td {
+  background-color: var(--color-base-300);
+  text-align: center;
+  border-top: var(--border) solid rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.table-pin-rows thead tr {
+  background-color: var(--color-base-100);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-1);
+}
+
+.table-pin-rows tfoot tr {
+  background-color: var(--color-base-100);
+  position: sticky;
+  bottom: 0;
+  z-index: var(--z-1);
+}
+
+.table-pin-cols tr th {
+  background-color: var(--color-base-100);
+  position: sticky;
+  right: 0;
+  left: 0;
+}
+
+/* .table thead tr,
+.table tbody tr:not(:last-child) {
+  border-bottom: var(--border) solid rgba(var(--color-base-content), 0.05);
+} */
+
+/* 제브라 스트라이프 스타일 */
+.table-zebra tbody tr:nth-child(even) {
+  background-color: var(--color-base-200);
+}
+
+.table-zebra tbody tr:nth-child(even) .table-pin-cols tr th {
+  background-color: var(--color-base-200);
+}
+
+.table-zebra tbody tr.row-hover:hover,
+.table-zebra tbody tr.row-hover:nth-child(even):hover {
+  background-color: var(--color-base-300);
+}
+
+/* 테이블 크기 변형 - SM */
+.table-sm tr:not(thead tr, tfoot tr) {
+  font-size: 0.9em;
+}
+
+.table-sm th,
+.table-sm td {
+  padding: 0.5em 0.75em;
+}
+
+/* 테이블 크기 변형 - MD */
+.table-md tr:not(thead tr, tfoot tr) {
+  font-size: 0.875em;
+}
+
+.table-md th,
+.table-md td {
+  padding: 0.75em 1em;
+}
+
+/* 테이블 크기 변형 - LG */
+.table-lg tr:not(thead tr, tfoot tr) {
+  font-size: 1.125em;
+}
+
+.table-lg th,
+.table-lg td {
+  padding: 1em 1.25em;
+}
