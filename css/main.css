@@ -150,6 +150,7 @@ body.hdn-scroll {
     height: auto;
     display: block;
     min-height: auto;
+    padding-top: 4rem;
   }
 
   .visual-section.fix .swiper {
