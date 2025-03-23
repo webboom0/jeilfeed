@@ -1,7 +1,7 @@
 :root {
   --gnbWd: 680px;
   --gnbMaxWd: 1200px;
-  --radius: 2rem;
+  --radius: 1rem;
 }
 
 .gnb.active>ul {
@@ -70,9 +70,38 @@
   letter-spacing: -0.5px;
 }
 
-.gnb>ul>li.active>a,
-.gnb>ul>li>a:hover {
+.gnb>ul>li.active>a span,
+.gnb>ul>li>a:hover span {
   color: rgb(255 202 207);
+  position: relative;
+  transition: all .5s ease 0s;
+}
+
+.gnb>ul>li.active>a span::after,
+.gnb>ul>li>a:hover span::after {
+  content: '';
+  position: absolute;
+  right: -.3em;
+  top: -.3em;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, .3);
+  animation: roundScale 2s ease-in-out 0s infinite forwards;
+}
+
+@keyframes roundScale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .gnb .panel {
@@ -188,10 +217,18 @@
 .gnb.allMenuActive .depth-2>li>a {
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 1rem 2rem;
   /* white-space: nowrap; */
   width: 100%;
   z-index: 1;
+}
+
+.gnb .depth-2>li:nth-child(1) {
+  padding-top: 2rem;
+}
+
+.gnb .depth-2>li:last-child {
+  padding-bottom: 2rem;
 }
 
 .gnb.depth-2>li>a::before,
