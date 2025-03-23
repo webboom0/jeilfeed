@@ -48,7 +48,7 @@
 }
 
 .gnb>ul>li.active>a {
-  color: var(--pointColor);
+  color: var(--color-secondary);
 }
 
 .gnb .panel {
