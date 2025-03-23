@@ -47,7 +47,8 @@
   letter-spacing: -0.5px;
 }
 
-.gnb>ul>li.active>a {
+.gnb>ul>li.active>a,
+.gnb>ul>li>a:hover {
   color: var(--color-secondary);
 }
 
