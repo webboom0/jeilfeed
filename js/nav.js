@@ -101,10 +101,14 @@ const gnb = {
     if ($(gnb.gnbEl).find(".panel").length <= 0) {
       $(gnb.gnbEl).append('<div class="panel"></div>');
     }
-
+    const length = $gnbEl.find(gnb.depth[1]).length;
+    const wd = 1200 / length;
+    console.log(length);
+    console.log(wd);
     // 2차메뉴 max 높이,가로 체크 후 위치, 사이즈 조절
     $gnbEl.find(gnb.depth[1]).each(function (i, v) {
-      gnb.dep2WdArr.push($(this).outerWidth());
+      $(this).width(wd);
+      console.log($(this).height());
       gnb.dep2HeightArr.push($(this).outerHeight());
     });
     // gnb.maxWidth = Math.max(...gnb.dep2WdArr);
@@ -115,14 +119,12 @@ const gnb = {
 
     function depthStyle() {
       // 2차메뉴 배경 요소 높이 설정
-      $gnbEl
-        .find(".panel")
-        .height(gnb.maxHeight)
-        .css("top", $(".header").height() + "px");
+      $gnbEl.find(".panel").height(gnb.maxHeight);
 
       // 2차메뉴 가로/세로사이즈, 위치 조절
       $gnbEl.find(gnb.depth[1]).each(function (i, v) {
-        $(this).css("height", gnb.maxHeight + "px");
+        console.log(gnb.maxHeight);
+        $(this).height(gnb.maxHeight);
       });
     }
   },
@@ -160,13 +162,14 @@ $(function () {
     if (matchMedia("screen and (max-width: 780px)").matches) {
       $("body").addClass("mode-mobile");
       gnb.mode = "mobile";
-    } else if (matchMedia("screen and (max-width: 1000px)").matches) {
+    } else if (matchMedia("screen and (max-width: 1200px)").matches) {
       $("body").addClass("mode-middle");
       gnb.mode = "middle";
     } else {
       gnb.mode = "pc";
       $("body").removeClass();
       comp.modal.remove();
+      gnb.set();
     }
     gnb.reset();
     gnb.init();
