@@ -139,6 +139,7 @@ const gnb = {
     $gnbEl.find(".open").removeClass("open");
     $(".allMenuActive").removeClass("allMenuActive");
     $(".allMenuBtn ").removeClass("toggle");
+    $("#gnb .etcMenu").remove();
   },
 };
 $(function () {

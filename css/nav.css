@@ -458,18 +458,11 @@
     padding: 0 10px;
     position: absolute;
     left: 2rem;
-    top: 2.5rem;
+    top: 2rem;
   }
 
   #gnb .etcMenu a {
-    padding: 5px;
-  }
-
-  #gnb .etcMenu li::after {
-    width: 1px;
-    height: 13px;
-    top: 5px;
-    opacity: .5;
+    padding: 1rem 1.5rem;
   }
 
   #gnb .etcMenu .sideMenuBtn {
