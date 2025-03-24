@@ -48,6 +48,20 @@
   background-image: url(../images/logo_wh.svg);
 }
 
+.header.allMenuActive {
+  background-color: #fff !important;
+
+}
+
+.header.allMenuActive .logo a {
+  background-image: url(../images/logo.svg ) !important;
+}
+
+.header.allMenuActive .etcMenu a,
+.header.allMenuActive .etcMenu i {
+  color: #333 !important;
+}
+
 .header .etcMenu>* {
   display: block;
   padding: .5rem 1rem;

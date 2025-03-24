@@ -379,12 +379,14 @@ const totalMenu = {
     // document.querySelector(".header.gnbActive").classList.remove("gnbActive");
     document.querySelector("#gnb").setAttribute("tabindex", "0");
     document.querySelector("#gnb").focus();
+    document.querySelector(".header").classList.add("allMenuActive");
     gnb.set();
   },
   close: function () {
     document.querySelector("#gnb").classList.remove("allMenuActive", "active");
     document.querySelector(".header").classList.remove("gnbActive");
     document.querySelector("#gnb").removeAttribute("tabindex");
+    document.querySelector(".header").classList.remove("allMenuActive");
   },
 };
 
