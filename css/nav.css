@@ -269,16 +269,13 @@
 
 @media (max-width:1200px) {
   :root {
-    --sideMenuSize: 400px;
+    --sideMenuSize: 500px;
   }
 
   .header .etcMenu .sideMenuBtn {
     display: flex;
   }
 
-  :root {
-    --sideMenuSize: 500px;
-  }
 
   .sideMenuBtn {
     width: var(--allMenuSize);
@@ -325,6 +322,9 @@
     max-width: 400px;
     margin-right: auto;
     margin-left: auto;
+    position: static;
+    height: auto;
+    transform: none;
   }
 
   .sideMenuOpen #gnb .depth-2 {
@@ -346,8 +346,8 @@
   }
 
   .sideMenuOpen .gnb>ul>li>a::after {
-    content: "\e9ac";
-    font-family: 'boxicons' !important;
+    content: "\ea4e";
+    font-family: "remixicon" !important;
     width: 17px;
     height: 17px;
     border-radius: 5px;
@@ -386,6 +386,7 @@
     border: none !important;
     padding-bottom: 20px;
     opacity: 1 !important;
+    transform: none;
   }
 
   .sideMenuOpen .gnb .depth-2>li>a {
@@ -455,6 +456,8 @@
     border-radius: 10px;
     background-color: #fff;
     color: #222;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
   }
-
 }
