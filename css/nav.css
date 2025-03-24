@@ -188,6 +188,7 @@
   transform: translateY(100%);
   /* background-color: #fff; */
   z-index: 2;
+  letter-spacing: -1px;
 }
 
 .gnb>ul>li:last-child .depth-2 {
