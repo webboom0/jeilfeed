@@ -3,6 +3,11 @@
   border-bottom: solid 1px var(--color-border);
 }
 
+.snb .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .snb ol {
   display: flex;
 }
@@ -23,6 +28,19 @@
   min-width: 10em;
   display: flex;
   align-items: center;
+}
+
+.snb ol>li>button {
+  max-width: 1.6rem;
+  padding: 1.6rem 3rem 1.6rem 1.6rem;
+}
+
+.snb ol>li>button .txt {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
 }
 
 .snb ol>li>a {

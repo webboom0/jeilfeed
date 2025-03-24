@@ -94,11 +94,14 @@
                             </ul>
                         </li>
                     </ul>
+                    <button type="button" class="totalMenuCloseBtn" onclick="totalMenu.close()"><i
+                            class="ri-close-fill"></i><span class="blind">전체메뉴닫기</span></button>
                 </nav>
                 <div class="etcMenu">
                     <a href="login.html"><i class="ri-login-box-line toggle"></i><span>로그인</span></a>
                     <a href="#"><i class="ri-user-add-line toggle"></i><span>회원가입</span></a>
-                    <a href="#" class="totalMenuBtn"><i class="ri-menu-line"></i><span class="blind">사이트맵</span></a>
+                    <a href="#" class="totalMenuBtn" onclick="totalMenu.open()"><i class="ri-menu-line"></i><span
+                            class="blind">사이트맵</span></a>
                     <!-- (모바일) 사이트메뉴 버튼 -->
                     <button type="button" href="#" class="sideMenuBtn" data-modalClickable='false' aria-label="메뉴 열기"
                         aria-expanded="false"><i class="ri-menu-line"></i><span class="blind">메뉴열기</span></button>
@@ -113,18 +116,26 @@
                                 class="blind">HOME</span></a>
                     </li>
                     <li class="drop-wrap">
-                        <button type="button" class="drop-btn active" target=".snb .menu1">1차메뉴_1</button>
+                        <button type="button" class="drop-btn active" target=".snb .menu1" title="관리자"><strong
+                                class="txt">관리자</strong></button>
                         <ul class="menu1">
-                            <li><a href="#">1차메뉴_2</a></li>
-                            <li><a href="#">1차메뉴_3</a></li>
-                            <li><a href="#">1차메뉴_4</a></li>
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">의뢰신청</a></li>
+                            <li><a href="#">의료현황</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                            <li><a href="#">마이페이지</a></li>
                         </ul>
                     </li>
                     <li class="drop-wrap">
-                        <button type="button" class="drop-btn" target=".snb .menu1">2차메뉴_1</button>
+                        <button type="button" class="drop-btn" target=".snb .menu2" title="담당자 및 개인회원"><strong
+                                class="txt">담당자 및
+                                개인회원</strong></button>
                         <ul class="menu2">
-                            <li><a href="#">2차메뉴_2</a></li>
-                            <li><a href="#">2차메뉴_3</a></li>
+                            <li><a href="#">게시판 관리</a></li>
+                            <li><a href="#">컨텐츠 관리</a></li>
+                            <li><a href="#">시험항목 관리</a></li>
+                            <li><a href="#">농장 관리</a></li>
                         </ul>
                     </li>
                 </ol>
@@ -152,7 +163,7 @@
                                 <p class="mt1 desc-txt ">천하제일사료 구성원만 로그인이 가능합니다.</p>
                                 <p class="mt3 fw500">아이디와 비밀번호를 입력해 주세요!<br>로그인이 필요한 서비스입니다.</p>
                             </div>
-                            <div class="right flex-col gap-1">
+                            <div class="right flex-col">
                                 <div class="form-field">
                                     <label for="id" class="blind">아이디</label>
                                     <input type="text" id="id" class="input input-lg" placeholder="아이디를 입력해주세요.">
