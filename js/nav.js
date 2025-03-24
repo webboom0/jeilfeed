@@ -114,6 +114,9 @@ const gnb = {
     });
     // gnb.maxWidth = Math.max(...gnb.dep2WdArr);
     gnb.maxHeight = Math.max(...gnb.dep2HeightArr);
+    document.querySelector(".totalMenuCloseBtn").style.top = `${
+      gnb.maxHeight + 120
+    }px`;
 
     // 2차메뉴 스타일 지정
     depthStyle();

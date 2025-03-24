@@ -81,6 +81,33 @@
   display: none;
 }
 
+.header .etcMenu .totalMenuBtn.toggle::before {
+  content: "\eb99";
+  font-family: "remixicon";
+  font-size: 1.6em;
+}
+
+.header .etcMenu .totalMenuBtn.toggle i {
+  display: none;
+}
+
+.totalMenuCloseBtn {
+  display: none;
+}
+
+.allMenuActive .totalMenuCloseBtn {
+  display: block;
+  position: absolute;
+  /* bottom: 2rem; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: #fff;
+  color: #333;
+}
+
 @media (max-width:1280px) {
   .header .gnb {
     font-size: 15px;

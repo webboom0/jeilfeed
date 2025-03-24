@@ -373,6 +373,20 @@ const dropMenu = {
   },
 };
 
+const totalMenu = {
+  open: function () {
+    document.querySelector("#gnb").classList.add("allMenuActive", "active");
+    document.querySelector(".header").classList.add("gnbActive");
+    document.querySelector("#gnb").setAttribute("tabindex", "0");
+    document.querySelector("#gnb").focus();
+  },
+  close: function () {
+    document.querySelector("#gnb").classList.remove("allMenuActive", "active");
+    document.querySelector(".header").classList.remove("gnbActive");
+    document.querySelector("#gnb").removeAttribute("tabindex");
+  },
+};
+
 $(function () {
   //dropMenu
   dropMenu.init();
