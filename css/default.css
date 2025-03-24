@@ -342,12 +342,24 @@ input[type="checkbox"]:focus+label {
   font-size: 1.1em !important;
 }
 
-.txt-lg {
-  font-size: 1.2em !important;
+.txt-lg-1 {
+  font-size: var(--txt-lg-1) !important;
 }
 
-.txt-xl {
-  font-size: 2.8em !important;
+.txt-lg-2 {
+  font-size: var(--txt-lg-2) !important;
+}
+
+.txt-lg-3 {
+  font-size: var(--txt-lg-3) !important;
+}
+
+.txt-lg-4 {
+  font-size: var(--txt-lg-4) !important;
+}
+
+.txt-xl-1 {
+  font-size: 2.3em !important;
 }
 
 .txt-center {
@@ -577,6 +589,10 @@ input[type="checkbox"]:focus+label {
   margin-bottom: 8rem !important;
 }
 
+.mb10 {
+  margin-bottom: 10rem !important;
+}
+
 .mt1 {
   margin-top: 1rem !important;
 }
@@ -610,7 +626,10 @@ input[type="checkbox"]:focus+label {
   font-weight: 400 !important;
 }
 
-/* list */
+.img-fit-cover {
+  object-fit: cover;
+}
+
 /* list */
 ul.b-list {
   display: flex;
