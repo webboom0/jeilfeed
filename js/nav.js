@@ -154,6 +154,8 @@ $(function () {
   $(".sideMenuBtn").on("click", function () {
     comp.modal.init($(this));
     $("body").addClass("sideMenuOpen");
+    $("#gnb .etcMenu").remove();
+    $(".header .etcMenu").clone().prependTo("#gnb");
   });
 
   windowRsize();

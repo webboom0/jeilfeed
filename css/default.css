@@ -13,7 +13,26 @@
 }
 
 :root {
+  /* Primary Colors */
+  --color-primary: rgba(225, 2, 20, 1);
+  --color-primary-content: rgba(234, 234, 234, 1);
+
+  /* Secondary Colors */
+  --color-secondary: rgba(0, 77, 159, 1);
+  --color-secondary-content: rgba(234, 234, 234, 1);
+
+  /* border Color */
   --color-border: #D8D8D8;
+
+  /* txt */
+  --txt-sm-1: 0.9em;
+  --txt-sm-3: 0.8em;
+  --txt-lg-1: 1em;
+  --txt-lg-2: 1.2em;
+  --txt-lg-3: 1.3em;
+  --txt-lg-4: 1.5em;
+  --txt-xl-1: 2.3em;
+
   --font-root: 10px;
 }
 

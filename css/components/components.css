@@ -15,13 +15,7 @@
     --color-base-300: rgba(242, 242, 242, 1);
     --color-base-content: rgb(54, 54, 54, 1);
 
-    /* Primary Colors */
-    --color-primary: rgba(0, 77, 159, 1);
-    --color-primary-content: rgba(234, 234, 234, 1);
 
-    /* Secondary Colors */
-    --color-secondary: rgba(225, 2, 20, 1);
-    --color-secondary-content: rgba(234, 234, 234, 1);
 
     /* Accent Colors */
     --color-accent: rgba(99, 195, 218, 1);
