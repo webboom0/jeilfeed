@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하림천하제일사료</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="keywords" content="천하제일사료, 기업소개, 제품정보, 으뜸이야기, 제일사료 기술연구소">
+    <meta name="description" content="천하제일사료">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- css -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/sub.css">
+    <!-- js -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/lib.js"></script>
+</head>
+
+<body>
+    <!-- skip -->
+    <div id="skipNav">
+        <ul>
+            <li><a href="#contents">본문 바로가기</a></li>
+            <li><a href="#gnb">주메뉴 바로가기</a></li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <!--header  -->
+        <header class="header">
+            <div class="container">
+                <h1 class="logo"><a href="#"><span class="blind">천하제일사료</span></a></h1>
+                <!-- gnb -->
+                <nav class="gnb" id="gnb">
+                    <button type="button" class="sideMenuCloseBtn"><i class="ri-close-fill"></i><span
+                            class="blind">메뉴닫기</span></button>
+                    <ul>
+                        <li class="depth-1">
+                            <a href="#"><span>소개</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">연구소 소개</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>이용방법</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">진행절차</a></li>
+                                <li><a href="#">담당자 관리</a></li>
+                                <li><a href="#">시험항목 및 수수료</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>의뢰신청</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">병성감정 의뢰</a></li>
+                                <li><a href="#">화학분석 의뢰</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>의뢰현황</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">임시저장 현황 조회</a></li>
+                                <li><a href="#">의뢰조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>커뮤니티</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>마이페이지</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">내정보 관리</a></li>
+                                <li><a href="#">내 시험항목 즐겨찾기</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>관리자</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">담당자 및 개인회원 관리</a></li>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">컨텐츠 관리</a></li>
+                                <li><a href="#">시험항목 관리</a></li>
+                                <li><a href="#">농장 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="totalMenuCloseBtn" onclick="totalMenu.close()"><i
+                            class="ri-close-fill"></i><span class="blind">전체메뉴닫기</span></button>
+                </nav>
+                <div class="etcMenu">
+                    <a href="#"><i class="ri-login-box-line toggle"></i><span>로그인</span></a>
+                    <a href="#"><i class="ri-user-add-line toggle"></i><span>회원가입</span></a>
+                    <a href="#" class="totalMenuBtn" onclick="totalMenu.open()"><i class="ri-menu-line"></i><span
+                            class="blind">사이트맵</span></a>
+                    <!-- (모바일) 사이트메뉴 버튼 -->
+                    <button type="button" href="#" class="sideMenuBtn" data-modalClickable='false' aria-label="메뉴 열기"
+                        aria-expanded="false"><i class="ri-menu-line"></i><span class="blind">메뉴열기</span></button>
+                </div>
+            </div>
+        </header>
+        <!-- snb -->
+        <div class="snb " id="snb">
+            <div class="container">
+                <ol>
+                    <li class=""><a href="index.html" class="home"><img src="images/icon_home.svg" alt="HOME"><span
+                                class="blind">HOME</span></a>
+                    </li>
+                    <li class="drop-wrap">
+                        <button type="button" class="drop-btn active" target=".snb .menu1">1차메뉴_1</button>
+                        <ul class="menu1">
+                            <li><a href="#">1차메뉴_2</a></li>
+                            <li><a href="#">1차메뉴_3</a></li>
+                            <li><a href="#">1차메뉴_4</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-wrap">
+                        <button type="button" class="drop-btn" target=".snb .menu1">2차메뉴_1</button>
+                        <ul class="menu2">
+                            <li><a href="#">2차메뉴_2</a></li>
+                            <li><a href="#">2차메뉴_3</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!-- ccontents -->
+        <div id="contents">
+            <div class="sub-top container">
+                <div class="cont-btns">
+                    <a href="#"><i class="icon16 clip"></i><span class="blind">주소복사</span></a>
+                    <a href="#"><i class="icon16 share"></i><span class="blind">공유</span></a>
+                    <a href="#"><i class="icon16 print"></i><span class="blind">인쇄</span></a>
+                </div>
+                <div class="container">
+                    <h2 class="sub-title bar">업무화면</h2>
+                </div>
+            </div>
+            <div class="cont-group">
+                <div class="container">
+                    <div class="buisiness-list-wrap">
+                        <!-- search -->
+                        <div class="search-wrap">
+                            <div class="head-group">
+                                <span class="tit">검색</span>
+                                <button type="button" class="btn btn-primary btn-sm search-toggle"
+                                    onclick="searchToggle()"><i class="ri ri-arrow-left-fill"></i>
+                                    <span class="txt blind">접기</span></button>
+                            </div>
+                            <div class="search-grup">
+                                <div class="form-field">
+                                    <label for="opt1" class="form-label">보고구분</label>
+                                    <div class="select">
+                                        <select id="opt1">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- // form-field -->
+                                <div class="form-field">
+                                    <label for="opt2" class="form-label">접수번호</label>
+                                    <input type="text" id="opt2" class="input">
+                                </div>
+                                <!-- // form-field -->
+                                <div class="form-field">
+                                    <label for="opt3" class="form-label">품목명</label>
+                                    <input type="text" id="opt3" class="input">
+                                </div>
+                                <!-- // form-field -->
+                                <div class="form-field">
+                                    <label for="opt4" class="form-label">허가번호</label>
+                                    <input type="text" id="opt4" class="input">
+                                </div>
+                                <!-- // form-field -->
+                                <div class="form-field">
+                                    <label for="opt5" class="form-label">진행상황</label>
+                                    <div class="select">
+                                        <select id="opt5">
+                                            <option>전체</option>
+                                            <option>진행중</option>
+                                            <option>진행완료 진행완료</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- // form-field -->
+                                <div class="form-field">
+                                    <label for="opt4" class="form-label">일괄보고관리번호</label>
+                                    <input type="text" id="opt4" class="input">
+                                </div>
+                                <!-- // form-field -->
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn  btn-primary">조회</button>
+                                <button class="btn  btn-secondary">초기화</button>
+                            </div>
+                        </div>
+                        <!-- // search -->
+                        <!-- list -->
+                        <div class="list-group">
+                            <div class="inline-group center flex-j-between mb1">
+                                <div class="fw700">
+                                    <span>총 <strong class="point-txt">239</strong>건</span>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btn btn-soft"">버튼</button>
+                    <button type=" button" class="btn btn-secondary">전체선택</button>
+                                    <button type="button" class="btn btn-primary">전체해제</button>
+                                    <a href="#none" class="btn btn-outline">엑셀 다운로드</a>
+                                    <button type="button" class="btn btn-outline">다운로드</button>
+                                </div>
+                            </div>
+                            <div class="scroll-box-row style-scroll">
+                                <table class="table table-center table-hover">
+                                    <caption>이물보고 표 : 선택, 번호, 보고구분, 접수번호, 보고일자, 등록일자, 품목명, 허가번호, 진행사항을 안내합니다.</caption>
+                                    <colgroup>
+                                        <col style="width:5%;">
+                                        <col style="width:5%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:12%;">
+                                        <col style="width:12%;">
+                                        <col>
+                                        <col style="width:10;">
+                                        <col style="width:8%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="arr_on"><input type="checkbox"
+                                                    class="checkbox checkbox-sm" title="전체 선택">
+                                            </th>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">보고구분</th>
+                                            <th scope="col">접수번호</th>
+                                            <th scope="col">보고일자</th>
+                                            <th scope="col">등록일자</th>
+                                            <th scope="col">품목명</th>
+                                            <th scope="col">허가번호</th>
+                                            <th scope="col">진행사항</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="checkbox checkbox-sm"
+                                                    title="접수번호 202200000298 선택">
+                                            </td>
+                                            <td>1</td>
+                                            <td>이물보고</td>
+                                            <td>202200000298</td>
+                                            <td>2022-05-19</td>
+                                            <td>2022-05-19</td>
+                                            <td>디지털엑스선촬영장치</td>
+                                            <td>제허 00-511 호</td>
+                                            <td><a href="#" class="btn btn-soft">임시저장</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="checkbox checkbox-sm"
+                                                    title="접수번호 202200000298 선택">
+                                            </td>
+                                            <td>1</td>
+                                            <td>이물보고</td>
+                                            <td>202200000298</td>
+                                            <td>2022-05-19</td>
+                                            <td>2022-05-19</td>
+                                            <td>디지털엑스선촬영장치</td>
+                                            <td>제허 00-511 호</td>
+                                            <td><a href="#" class="btn btn-soft">임시저장</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="checkbox checkbox-sm"
+                                                    title="접수번호 202200000298 선택">
+                                            </td>
+                                            <td>1</td>
+                                            <td>이물보고</td>
+                                            <td>202200000298</td>
+                                            <td>2022-05-19</td>
+                                            <td>2022-05-19</td>
+                                            <td>디지털엑스선촬영장치</td>
+                                            <td>제허 00-511 호</td>
+                                            <td><a href="#" class="btn btn-soft">임시저장</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="checkbox checkbox-sm"
+                                                    title="접수번호 202200000298 선택">
+                                            </td>
+                                            <td>1</td>
+                                            <td>이물보고</td>
+                                            <td>202200000298</td>
+                                            <td>2022-05-19</td>
+                                            <td>2022-05-19</td>
+                                            <td>디지털엑스선촬영장치</td>
+                                            <td>제허 00-511 호</td>
+                                            <td><a href="#" class="btn btn-soft">임시저장</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="checkbox checkbox-sm"
+                                                    title="접수번호 202200000298 선택">
+                                            </td>
+                                            <td>1</td>
+                                            <td>이물보고</td>
+                                            <td>202200000298</td>
+                                            <td>2022-05-19</td>
+                                            <td>2022-05-19</td>
+                                            <td>디지털엑스선촬영장치</td>
+                                            <td>제허 00-511 호</td>
+                                            <td><a href="#" class="btn btn-soft">임시저장</a></td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="warning-txt"><span class="point-txt fw700">주의사항:</span> 내용을 <span
+                                    class="point-txt">'임시저장'</span> 상태의 보고는 직접
+                                수정/삭제가 가능합니다.</p>
+
+                            <div class="inline-group flex-j-end">
+                                <button type="button" class="btn btn-primary"
+                                    onclick="dialog.open('#popup1')">팝업버튼1</button>
+                                <button type="button" class="btn btn-secondary"
+                                    onclick="dialog.open('#popup2')">팝업버튼2(large)</button>
+                                <a href="#" class="btn btn-soft">버튼</a>
+                            </div>
+                        </div>
+                        <!-- // list -->
+                    </div>
+                </div>
+                <!-- // container -->
+            </div>
+            <!-- // cont-group -->
+        </div>
+        <!-- // #contents -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="info">
+                    <div class="address">
+                        <ul>
+                            <li><span class="label">본사</span><span class="txt">(54596) 전라북도 익산시 중앙로121</span></li>
+                            <li><span class="label">서울</span><span class="txt">(06039) 서울특별시 강남구 도산대로 130</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="links">
+                        <a href="#" class="second-txt fw700">개인정보처리방침</a>
+                        <a href="#">저작권정책</a>
+                    </div>
+                    <div class="copyright">COPYRIGHT © 2025 HARIM. ALL RIGHTS RESERVED.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- // wrap -->
+
+    <!-- 팝업1 -->
+    <div class="dialog" id="popup1" role="dialog" aria-modal="true" aria-labelledby="popup1-title">
+        <div class="inner">
+            <div class="head">
+                <h3 id="popup1-title" class="title">팝업 제목입니다.</h3>
+                <button type="button" onclick="dialog.close('#popup1')" class="closeBtn"><i
+                        class="ri ri-close-fill"></i><span class="blind">닫기</span></button>
+            </div>
+            <div class="body" role="document">
+                팝업
+                내용입니다.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <b<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="foot" role="document">
+                <a href="#" class="btn btn-primary" onclick="dialog.close('#popup1')">확인</a>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업2 -->
+    <div class="dialog large" id="popup2" role="dialog" aria-modal="true" aria-labelledby="popup2-title">
+        <div class="inner">
+            <div class="head">
+                <h3 id="popup2-title" class="title">팝업 제목입니다.</h3>
+                <button type="button" onclick="dialog.close('#popup2')" class="closeBtn"><i
+                        class="ri ri-close-fill"></i><span class="blind">닫기</span></button>
+            </div>
+            <div class="body" role="document">
+                팝업
+                내용입니다.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="foot" role="document">
+                <a href="#" class="btn btn-primary" onclick="dialog.close('#popup2')">확인</a>
+                <a href="#" class="btn btn-outline">취소</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

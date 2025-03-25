@@ -120,7 +120,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover:not(.btn) {
   color: var(--color-primary);
 }
 
@@ -271,6 +271,23 @@ input[type="checkbox"]:focus+label {
   }
 }
 
+/* grid */
+.grid {
+  display: grid;
+}
+
+.grid.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.col-3 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 /* 구분선 */
 .division-line-row>* {
   position: relative;
@@ -364,6 +381,23 @@ input[type="checkbox"]:focus+label {
 
 .txt-center {
   text-align: center !important;
+}
+
+.txt-nowrap {
+  white-space: nowrap;
+}
+
+.warning-txt {
+  display: flex;
+  align-items: center;
+}
+
+.warning-txt::before {
+  content: "\eca0";
+  font-family: "remixicon";
+  margin-right: .5rem;
+  color: var(--color-primary);
+  font-size: 1.1em;
 }
 
 .desc-txt {
@@ -726,6 +760,10 @@ ul.b-list.bar li::before {
   width: calc(100% - 40px);
 }
 
+.dialog.large.open>* {
+  max-width: 1280px;
+}
+
 .dialog.open::before {
   content: "";
   position: fixed;
@@ -740,18 +778,30 @@ ul.b-list.bar li::before {
   border-radius: 1.2rem;
   background-color: #f9f9f9;
   overflow: hidden;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .dialog .head {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 1.5rem 2rem;
+  /* background: var(--color-secondary); */
+  /* background-color: #ededed; */
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+}
+
+.dialog .head .title {
+  font-weight: 700;
 }
 
 .dialog .body {
   padding: 4rem;
+  overflow: auto;
+  flex-grow: 1;
 }
 
 .dialog .foot {
@@ -761,6 +811,7 @@ ul.b-list.bar li::before {
   gap: 1rem;
   justify-content: flex-end;
   align-items: center;
+  background-color: #ededed;
 }
 
 /* position */

@@ -129,16 +129,30 @@ const selectForm = {
 
 /****** [ dialog ] ******/
 const dialog = {
+  target: null,
   open(target) {
+    dialog.target = target;
     document.querySelector("body").classList.add("scroll-hdn");
     document.querySelector(target).classList.add("open");
     document.querySelector(target).setAttribute("tabindex", "0");
     document.querySelector(target).focus();
+    document.querySelectorAll(".dialog").forEach(function (val, idx) {
+      val.addEventListener("click", dialog.handler);
+    });
   },
   close(target) {
+    dialog.target = target;
     document.querySelector("body").classList.remove("scroll-hdn");
     document.querySelector(target).classList.remove("open");
     document.querySelector(target).removeAttribute("tabindex");
+    document.querySelectorAll(".dialog").forEach(function (val, idx) {
+      val.removeEventListener("click", dialog.handler);
+    });
+  },
+  handler: function (e) {
+    if (!e.target.closest(".inner")) {
+      dialog.close(dialog.target);
+    }
   },
 };
 
@@ -148,11 +162,25 @@ const touchScroll = {
   startX: null,
   scrollLeft: null,
   init(sliderEl) {
-    sliderEl.style.cursor = "move";
+    // sliderEl.style.cursor = "move";
+    touchScroll.cursor(sliderEl);
+    $(window).resize(function () {
+      touchScroll.cursor(sliderEl);
+    });
     sliderEl.addEventListener("mousedown", this.mousedownHandler.bind(this));
     sliderEl.addEventListener("mouseleave", this.mouseleaveHandler.bind(this));
     sliderEl.addEventListener("mouseup", this.mouseupHandler.bind(this));
     sliderEl.addEventListener("mousemove", this.mousemoveHandler.bind(this));
+  },
+  cursor(sliderEl) {
+    // 스크롤 가능 여부 확인
+    const hasScroll = sliderEl.scrollWidth > sliderEl.clientWidth;
+    // 스크롤이 있을 때만 move 커서 적용
+    if (hasScroll) {
+      sliderEl.style.cursor = "move";
+    } else {
+      sliderEl.style.cursor = "default";
+    }
   },
   mousedownHandler(e) {
     const slider = e.currentTarget;
@@ -247,7 +275,7 @@ const tab = {
     });
   },
 };
-
+/****** [  scroll 기능 tab) ] ******/
 const scrollTab = {
   wrap: ".scrollTab-box",
   tit: ".scrollTab-box .box-tit-group .tit",
@@ -372,7 +400,7 @@ const dropMenu = {
     }
   },
 };
-
+/***** [ 상단 사이트맵(전체메뉴) ] *******/
 const totalMenu = {
   open: function () {
     document.querySelector("#gnb").classList.add("allMenuActive", "active");
@@ -389,6 +417,20 @@ const totalMenu = {
     document.querySelector(".header").classList.remove("allMenuActive");
   },
 };
+/***** [ 검색 보이기/안보기 ] *******/
+const searchToggle = function () {
+  document.querySelector(".search-wrap").classList.toggle("close");
+  document
+    .querySelector(".search-wrap .ri")
+    .classList.toggle("ri-arrow-right-fill");
+
+  const txt = document.querySelector(".search-wrap .head-group .txt");
+  if (txt.textContent === "펼치기") {
+    txt.textContent = "접기";
+  } else {
+    txt.textContent = "펼치기";
+  }
+};
 
 $(function () {
   //dropMenu
@@ -401,20 +443,5 @@ $(function () {
   // scroll-x touch scroll
   document.querySelectorAll(".scroll-box-row").forEach((el) => {
     touchScroll.init(el);
-    if (el.querySelectorAll(".active").length > 0) {
-    }
-  });
-
-  //  toggleActive 실행
-  $("*[data-comp='toggleActive']").each(function (i, v) {
-    if ($(this).attr("data-opt")) {
-      let opt = JSON.parse($(this).attr("data-opt"));
-      $(this).on("click", function (e) {
-        comp.toggleActive($(this), opt.el, opt.className, opt.title);
-      });
-    } else {
-      let errorEl = String($(this).context.outerHTML);
-      console.error(errorEl + "\n 다음 요소에 data-opt 속성을 추가해 주세요.");
-    }
   });
 });

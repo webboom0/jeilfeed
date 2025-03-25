@@ -11,7 +11,7 @@
   padding-left: 1em;
   padding-right: 1.75em;
   vertical-align: middle;
-  width: clamp(3em, 10em, 100%);
+  /* width: clamp(3em, 10em, 100%); */
   height: var(--size);
   font-size: var(--fontsize);
   border-start-start-radius: var(--join-ss, var(--radius-field));
@@ -25,14 +25,13 @@
   background-size: 4px 4px, 4px 4px;
   background-repeat: no-repeat;
   text-overflow: ellipsis;
-  box-shadow: 0 1px
-      color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000)
-      inset,
+  box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000) inset,
     0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
   border-color: var(--input-color);
   --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
   --size: calc(var(--size-field, 0.25em) * 10);
 }
+
 
 .select select {
   margin-left: -1em;
@@ -40,19 +39,23 @@
   width: calc(100% + 2.75em);
   appearance: none;
   padding-left: 1em;
-  padding-right: 1.75em;
+  padding-right: 2.2em;
   height: calc(100% - 2px);
   background: inherit;
   border-radius: inherit;
   border-style: none;
   cursor: pointer;
+  background-color: transparent;
+}
+
+.select select.wAuto {
+  width: auto !important;
 }
 
 .select:focus,
 .select:focus-within {
   --input-color: var(--color-base-content);
-  box-shadow: 0 1px
-    color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
+  box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
   outline: 2px solid var(--input-color);
   outline-offset: 2px;
 }
@@ -65,7 +68,7 @@
   cursor: not-allowed;
 }
 
-.select:has(> select[disabled]) > select[disabled] {
+.select:has(> select[disabled])>select[disabled] {
   cursor: not-allowed;
 }
 

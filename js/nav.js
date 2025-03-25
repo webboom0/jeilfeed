@@ -104,12 +104,9 @@ const gnb = {
     }
     const length = $gnbEl.find(gnb.depth[1]).length;
     const wd = gnb.gnbWidth / length;
-    console.log(length);
-    console.log(wd);
     // 2차메뉴 max 높이,가로 체크 후 위치, 사이즈 조절
     $gnbEl.find(gnb.depth[1]).each(function (i, v) {
       $(this).width(wd);
-      console.log($(this).height());
       gnb.dep2HeightArr.push($(this).outerHeight());
     });
     // gnb.maxWidth = Math.max(...gnb.dep2WdArr);
@@ -127,7 +124,6 @@ const gnb = {
 
       // 2차메뉴 가로/세로사이즈, 위치 조절
       $gnbEl.find(gnb.depth[1]).each(function (i, v) {
-        console.log(gnb.maxHeight);
         $(this).height(gnb.maxHeight);
       });
     }

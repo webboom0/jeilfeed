@@ -65,7 +65,7 @@
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .form-field.inline {
@@ -75,8 +75,12 @@
 
 .form-field input[type=text],
 .form-field input[type=password],
-.form-field select,
 .form-field textarea,
 .form-field .btn {
     width: 100%;
+}
+
+.form-field.inline .btn {
+    width: auto;
+    flex-grow: 1;
 }
