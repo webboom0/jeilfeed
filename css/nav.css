@@ -292,11 +292,12 @@
     display: block;
     width: 100%;
     position: static;
-    height: auto;
+    height: calc(100vh - 80px);
     transform: none;
     padding-left: 2rem;
     padding-right: 2rem;
     background-color: #fff;
+    overflow-y: auto;
   }
 
   .sideMenuOpen #gnb .depth-2 {
