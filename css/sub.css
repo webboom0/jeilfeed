@@ -837,7 +837,6 @@
 .buisiness-list-wrap .search-wrap .btn-group {
   display: flex;
   gap: .5rem;
-  /* margin-top: 2rem; */
   padding: 2rem;
 }
 

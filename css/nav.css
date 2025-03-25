@@ -104,18 +104,14 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  /* width: 100vw; */
-  /* height: 300px; */
   background-color: #fff;
   z-index: 9;
   border-top: solid 1px #E0E0E0;
   border-bottom: solid 1px #E0E0E0;
-  /* transform-origin: center; */
   z-index: 1;
   transform: translate(-50%, 100%);
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   border-radius: 0 0 var(--radius) var(--radius);
-  /* width: var(--gnbWd); */
   background: linear-gradient(45deg, rgb(234 244 255), rgb(255 236 237));
 }
 
@@ -133,24 +129,9 @@
   opacity: .6;
 }
 
-/* 
-.gnb.active::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 1;
-  transform: translateY(-100%);
-} */
-
 .gnb.active .panel,
 .gnb.allMenuActive .panel {
   display: block;
-  /* width: var(--gnbMaxWd); */
-  /* width: var(--gnbMaxWd); */
   animation: slidein;
   animation-delay: 0s;
   animation-duration: .5s;
@@ -172,7 +153,6 @@
   }
 }
 
-
 .gnb .depth-2 {
   position: absolute;
   left: 0;
@@ -180,20 +160,15 @@
   display: none;
   z-index: 11;
   font-size: 1em;
-  /* padding: 1rem 1rem 2rem; */
   border-left: solid 1px rgba(200, 100, 0, .1);
   margin-top: 1px;
   color: #000;
   opacity: 0;
   transform: translateY(100%);
-  /* background-color: #fff; */
   z-index: 2;
   letter-spacing: -1px;
 }
 
-.gnb>ul>li:last-child .depth-2 {
-  /* border-right: solid 1px #E0E0E0; */
-}
 
 .gnb.active .depth-2,
 .gnb.allMenuActive .depth-2 {
@@ -228,7 +203,6 @@
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
-  /* white-space: nowrap; */
   width: 100%;
   z-index: 1;
 }
@@ -277,7 +251,6 @@
     display: flex;
   }
 
-
   .sideMenuBtn {
     width: var(--allMenuSize);
     height: var(--allMenuSize);
@@ -294,14 +267,13 @@
   }
 
   .gnb {
-    /*    display: none;*/
     display: flex;
     position: fixed;
     right: -100vw;
     left: auto;
     transform: none;
     top: 0;
-    background-color: var(--color-primary);
+    background: linear-gradient(45deg, var(--color-primary) 50%, var(--color-secondary) 100%);
     width: 100vw;
     height: 100vh;
     max-width: var(--sideMenuSize);
@@ -319,7 +291,6 @@
   .gnb>ul {
     display: block;
     width: 100%;
-    /* max-width: 400px; */
     position: static;
     height: auto;
     transform: none;
@@ -426,11 +397,7 @@
     right: 0;
   }
 
-
-  .allMenuBtn {
-    display: none;
-  }
-
+  .allMenuBtn,
   .sideMenuCloseBtn {
     display: none;
   }
