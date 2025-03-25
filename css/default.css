@@ -646,7 +646,6 @@ ul.b-list.disc>li,
   display: flex;
   position: relative;
   padding-left: 0.7em;
-  /* align-items: center; */
   align-items: flex;
 }
 
