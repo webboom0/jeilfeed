@@ -181,6 +181,12 @@ input[type="checkbox"]:focus+label {
   width: 20% !important;
 }
 
+@media (max-width:780px) {
+  .m-w100 {
+    width: 100% !important;
+  }
+}
+
 /* flex */
 .flex {
   display: flex !important;

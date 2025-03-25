@@ -420,10 +420,6 @@ const totalMenu = {
 /***** [ 검색 보이기/안보기 ] *******/
 const searchToggle = function () {
   document.querySelector(".search-wrap").classList.toggle("close");
-  document
-    .querySelector(".search-wrap .ri")
-    .classList.toggle("ri-arrow-right-fill");
-
   const txt = document.querySelector(".search-wrap .head-group .txt");
   if (txt.textContent === "펼치기") {
     txt.textContent = "접기";
