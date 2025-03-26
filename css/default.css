@@ -349,8 +349,8 @@ input[type="checkbox"]:focus+label {
   display: inline-block;
   height: 0.8em;
   width: 100%;
-  background-color: rgba(47, 106, 255, 0.15);
-  z-index: -1;
+  background-color: rgba(47, 142, 255, 15%);
+  z-index: 0;
 }
 
 .txt-small {
@@ -393,17 +393,31 @@ input[type="checkbox"]:focus+label {
   white-space: nowrap;
 }
 
-.warning-txt {
+.warning-txt,
+.info-txt,
+.ast-txt {
   display: flex;
   align-items: center;
 }
 
-.warning-txt::before {
+.warning-txt::before,
+.info-txt::before,
+.check-txt::before {
   content: "\eca0";
   font-family: "remixicon";
   margin-right: .5rem;
   color: var(--color-primary);
   font-size: 1.1em;
+}
+
+.info-txt::before {
+  content: "\ee58";
+  color: rgb(255 133 13);
+}
+
+.check-txt::before {
+  content: "\eb80";
+  color: var(--color-secondary);
 }
 
 .desc-txt {
@@ -1043,3 +1057,53 @@ ul.b-list.bar li::before {
     border-bottom: none;
   }
 }
+
+/* common */
+.block-field {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+
+.count-label {
+  background-color: #fff;
+  padding: .2rem .5rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  border-radius: .5rem;
+  border: solid 1px rgba(0, 0, 0, .2);
+  font-size: .9em;
+}
+
+
+.require::before {
+  content: "\eb80";
+  font-family: "remixicon";
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  color: var(--color-secondary);
+  font-size: 15px;
+}
+
+.uploadFile-box {
+  background: #fafafa;
+  border: dashed 1px #cdcdcd;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* .require::before {
+  content: "\f186";
+  font-family: "remixicon";
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  color: var(--color-primary);
+  font-size: 10px;
+} */

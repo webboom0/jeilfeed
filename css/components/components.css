@@ -7,6 +7,7 @@
 @import url(radio.css);
 @import url(select.css);
 @import url(table.css);
+@import url(textarea.css);
 
 :root {
     /* Base Colors */

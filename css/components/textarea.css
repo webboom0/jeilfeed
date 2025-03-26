@@ -1,0 +1,136 @@
+.textarea {
+    border: var(--border) solid transparent;
+    background-color: var(--color-base-100);
+    border-radius: var(--radius-field);
+    min-height: 1.25em;
+    flex-shrink: 0;
+    appearance: none;
+    padding: 0.125em;
+    vertical-align: middle;
+    width: clamp(3em, 20em, 100%);
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    font-size: 0.875em;
+    border-color: var(--input-color);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent) inset,
+        0 -1px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset;
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+}
+
+.textarea textarea {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+.textarea textarea:focus,
+.textarea textarea:focus-within {
+    outline: none;
+}
+
+.textarea:focus,
+.textarea:focus-within {
+    --input-color: var(--color-base-content);
+    box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), transparent);
+    outline: 2px solid var(--input-color);
+    outline-offset: 2px;
+    isolation: isolate;
+}
+
+.textarea:has(> textarea[disabled]),
+.textarea:is(:disabled, [disabled]) {
+    border-color: var(--color-base-200);
+    background-color: var(--color-base-200);
+    color: rgba(var(--color-base-content), 0.4);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.textarea:has(> textarea[disabled])>textarea[disabled] {
+    cursor: not-allowed;
+}
+
+.textarea-ghost {
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.textarea-ghost:focus,
+.textarea-ghost:focus-within {
+    color: var(--color-base-content);
+    background-color: var(--color-base-100);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* Color variants */
+.textarea-neutral,
+.textarea-neutral:focus,
+.textarea-neutral:focus-within {
+    --input-color: var(--color-neutral);
+}
+
+.textarea-primary,
+.textarea-primary:focus,
+.textarea-primary:focus-within {
+    --input-color: var(--color-primary);
+}
+
+.textarea-secondary,
+.textarea-secondary:focus,
+.textarea-secondary:focus-within {
+    --input-color: var(--color-secondary);
+}
+
+.textarea-accent,
+.textarea-accent:focus,
+.textarea-accent:focus-within {
+    --input-color: var(--color-accent);
+}
+
+.textarea-info,
+.textarea-info:focus,
+.textarea-info:focus-within {
+    --input-color: var(--color-info);
+}
+
+.textarea-success,
+.textarea-success:focus,
+.textarea-success:focus-within {
+    --input-color: var(--color-success);
+}
+
+.textarea-warning,
+.textarea-warning:focus,
+.textarea-warning:focus-within {
+    --input-color: var(--color-warning);
+}
+
+.textarea-error,
+.textarea-error:focus,
+.textarea-error:focus-within {
+    --input-color: var(--color-error);
+}
+
+/* Size variants */
+.textarea-xs {
+    font-size: 0.6875em;
+}
+
+.textarea-sm {
+    font-size: 0.75em;
+}
+
+.textarea-md {
+    font-size: 0.875em;
+}
+
+.textarea-lg {
+    font-size: 1.125em;
+}
+
+.textarea-xl {
+    font-size: 1.375em;
+}

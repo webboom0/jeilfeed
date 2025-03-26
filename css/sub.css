@@ -175,6 +175,11 @@
   border-bottom: solid 1px var(--color-border);
 }
 
+.head-title-1 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
 @media (max-width:780px) {
   .sub-top {
     padding-top: 2rem;
@@ -754,15 +759,15 @@
 
 /* form */
 .inline-group,
-.inline-group.top {
+.inline-group.center {
   display: flex;
   gap: .5rem;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-.inline-group.center {
-  align-items: center;
+.inline-group.top {
+  align-items: flex-start;
 }
 
 .inline-group.bottom {
@@ -774,7 +779,13 @@
   font-weight: 500;
 }
 
-
+.inline-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
 
 /* 업무 리스트 */
 .buisiness-list-wrap {
@@ -910,5 +921,3 @@
     display: block;
   }
 }
-
-@media (max-width:780px) {}

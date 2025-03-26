@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하림천하제일사료</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="keywords" content="천하제일사료, 기업소개, 제품정보, 으뜸이야기, 제일사료 기술연구소">
+    <meta name="description" content="천하제일사료">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- css -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/sub.css">
+    <!-- js -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/lib.js"></script>
+</head>
+
+<body>
+    <!-- skip -->
+    <div id="skipNav">
+        <ul>
+            <li><a href="#contents">본문 바로가기</a></li>
+            <li><a href="#gnb">주메뉴 바로가기</a></li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <!--header  -->
+        <header class="header">
+            <div class="container">
+                <h1 class="logo"><a href="#"><span class="blind">천하제일사료</span></a></h1>
+                <!-- gnb -->
+                <nav class="gnb" id="gnb">
+                    <button type="button" class="sideMenuCloseBtn"><i class="ri-close-fill"></i><span
+                            class="blind">메뉴닫기</span></button>
+                    <ul>
+                        <li class="depth-1">
+                            <a href="#"><span>소개</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">연구소 소개</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>이용방법</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">진행절차</a></li>
+                                <li><a href="#">담당자 관리</a></li>
+                                <li><a href="#">시험항목 및 수수료</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>의뢰신청</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">병성감정 의뢰</a></li>
+                                <li><a href="#">화학분석 의뢰</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>의뢰현황</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">임시저장 현황 조회</a></li>
+                                <li><a href="#">의뢰조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>커뮤니티</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>마이페이지</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">내정보 관리</a></li>
+                                <li><a href="#">내 시험항목 즐겨찾기</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth-1">
+                            <a href="#"><span>관리자</span></a>
+                            <ul class="depth-2">
+                                <li><a href="#">담당자 및 개인회원 관리</a></li>
+                                <li><a href="#">게시판 관리</a></li>
+                                <li><a href="#">컨텐츠 관리</a></li>
+                                <li><a href="#">시험항목 관리</a></li>
+                                <li><a href="#">농장 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button type="button" class="totalMenuCloseBtn" onclick="totalMenu.close()"><i
+                            class="ri-close-fill"></i><span class="blind">전체메뉴닫기</span></button>
+                </nav>
+                <div class="etcMenu">
+                    <a href="#"><i class="ri-login-box-line toggle"></i><span>로그인</span></a>
+                    <a href="#"><i class="ri-user-add-line toggle"></i><span>회원가입</span></a>
+                    <a href="#" class="totalMenuBtn" onclick="totalMenu.open()"><i class="ri-menu-line"></i><span
+                            class="blind">사이트맵</span></a>
+                    <!-- (모바일) 사이트메뉴 버튼 -->
+                    <button type="button" href="#" class="sideMenuBtn" data-modalClickable='false' aria-label="메뉴 열기"
+                        aria-expanded="false"><i class="ri-menu-line"></i><span class="blind">메뉴열기</span></button>
+                </div>
+            </div>
+        </header>
+        <!-- snb -->
+        <div class="snb" id="snb">
+            <div class="container">
+                <ol>
+                    <li class=""><a href="index.html" class="home"><img src="images/icon_home.svg" alt="HOME"><span
+                                class="blind">HOME</span></a>
+                    </li>
+                    <li class="drop-wrap">
+                        <button type="button" class="drop-btn active" target=".snb .menu1">1차메뉴_1</button>
+                        <ul class="menu1">
+                            <li><a href="#">1차메뉴_2</a></li>
+                            <li><a href="#">1차메뉴_3</a></li>
+                            <li><a href="#">1차메뉴_4</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-wrap">
+                        <button type="button" class="drop-btn" target=".snb .menu1">2차메뉴_1</button>
+                        <ul class="menu2">
+                            <li><a href="#">2차메뉴_2</a></li>
+                            <li><a href="#">2차메뉴_3</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!-- ccontents -->
+        <div id="contents">
+            <div class="sub-top container">
+                <div class="cont-btns">
+                    <a href="#"><i class="icon16 clip"></i><span class="blind">주소복사</span></a>
+                    <a href="#"><i class="icon16 share"></i><span class="blind">공유</span></a>
+                    <a href="#"><i class="icon16 print"></i><span class="blind">인쇄</span></a>
+                </div>
+                <div class="container">
+                    <h2 class="sub-title bar">업무화면</h2>
+                </div>
+            </div>
+            <div class="cont-group">
+                <div class="container">
+                    <div class="block-field">
+                        <h3 class="head-title-1">보고구분</h3>
+                        <table class="table table-view table-resp mt1">
+                            <caption>보고구분표 : 보고구분을 안내합니다.</caption>
+                            <colgroup>
+                                <col style="width:18%">
+                                <col style="width:82%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col">보고구분<span class="require"><span class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td>
+                                        <div class="inline-group">
+                                            <input type="radio" class="radio" name="input_radio" value="Y"
+                                                id="input_radio1" checked="" disabled=""><label
+                                                for="input_radio1">이물보고</label>
+                                            <input type="radio" class="radio" name="input_radio" value="Y"
+                                                id="input_radio2" disabled=""><label for="input_radio2">불량보고</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //block-field -->
+
+                    <div class="block-field">
+                        <div class="inline-between">
+                            <h3 class="head-title-1">보고자정보</h3>
+                            <button type="button" class="btn btn-primary">메모(알림) <span
+                                    class="count-label">2</span></button>
+                        </div>
+                        <table class="table table-view table-resp mt1">
+                            <caption>보고자정보 : 명칭(상호), 성명, 전화번호, 소재지를 안내합니다.</caption>
+                            <colgroup>
+                                <col style="width:18%">
+                                <col style="width:32%">
+                                <col style="width:18%">
+                                <col style="width:32%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label for="input01">명칭(상호)</label><span class="require"><span
+                                                class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td><input name="" id="input01" value="" class="input" type="text">
+                                    </td>
+                                    <th scope="row"><label for="input02">성명</label><span class="require"><span
+                                                class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td><input name="" id="input02" value="" class="input" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input03">전화번호</label><span class="require"><span
+                                                class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td class="" colspan="3"><input name="" value="02-1234-2222" id="input03"
+                                            class="input" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">소재지</th>
+                                    <td colspan="3">
+                                        <div class="inline-group">
+                                            <label for="InputSearch" class="blind">우편번호</label>
+                                            <input name="" value="" id="InputSearch" class="input" disabled=""
+                                                type="search">
+                                            <button type="button" class="btn btn-secondary" title="검색">검색</button>
+                                        </div>
+                                        <div class="mt1">
+                                            <label for="InputText1" class="blind">주소</label><input name="" value=""
+                                                id="InputText1" class="input w100" placeholder="주소" title="주소"
+                                                type="text">
+                                        </div>
+                                        <div class="mt1">
+                                            <label for="InputText2" class="blind">상세주소</label><input name="" value=""
+                                                id="InputText2" class="input w100" placeholder="상세주소" title="상세주소"
+                                                type="text">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // block-field -->
+
+                    <div class="block-field">
+                        <h3 class="head-title-1">보고자유형</h3>
+                        <table class="table table-view table-resp mt1">
+                            <caption>보고자유형 : 의료기기취급자의 대한 내용을 안내합니다.</caption>
+                            <colgroup>
+                                <col style="width:18%">
+                                <col style="width:82%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">의료기기취급자<span class="require"><span class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td>
+                                        <div class="inline-group">
+                                            <input type="radio" class="radio" name="input_radio2" value="Y"
+                                                id="input_radio3"><label for="input_radio3">의료기기제조업자</label>
+                                            <input type="radio" class="radio" name="input_radio2" value="Y"
+                                                id="input_radio4"><label for="input_radio4">의료기기수입업자</label>
+                                            <input type="radio" class="radio" name="input_radio2" value="Y"
+                                                id="input_radio5"><label for="input_radio5">의료기기수리업자</label>
+                                            <input type="radio" class="radio" name="input_radio2" value="Y"
+                                                id="input_radio6"><label for="input_radio6">의료기기팜내(임대)업자</label>
+                                            <input type="radio" class="radio" name="input_radio2" value="Y"
+                                                id="input_radio7"><label for="input_radio7">의료기관개설자</label>
+                                            <input type="radio" class="radio" name="input_radio2" value="Y"
+                                                id="input_radio8"><label for="input_radio8">동물병원개설자</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">의료기기취급자외</th>
+                                    <td>
+                                        <div class="inline-group mb1">
+                                            <input type="radio" class="radio" name="input_radio3" value="Y"
+                                                id="input_radio9"><label for="input_radio9">의사·한의사</label>
+                                            <input type="radio" class="radio" name="input_radio3" value="Y"
+                                                id="input_radio10"><label for="input_radio10">간호사</label>
+                                            <input type="radio" class="radio" name="input_radio3" value="Y"
+                                                id="input_radio11"><label for="input_radio11">기타</label>
+                                        </div>
+                                        <input type="text" name="" value="" class="input" title="기타 입력">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // block-field -->
+
+                    <div class="block-field">
+                        <h3 class="head-title-1">의료기기정보</h3>
+                        <table class="table table-view table-resp mt1">
+                            <caption>의료기기정보 : 대상업소명, 허가번호를 안내합니다.</caption>
+                            <colgroup>
+                                <col style="width:18%">
+                                <col style="width:32%">
+                                <col style="width:18%">
+                                <col style="width:32%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label for="companyName">대상 업소명</label><span class="require"><span
+                                                class="blind">*필수입력</span></span></th>
+                                    <td>
+                                        <input type="search" name="" value="" id="companyName" class="input"
+                                            disabled="">
+                                        <button type="button" class="btn btn-secondary" title="검색">검색</button>
+                                    </td>
+                                    <th scope="row"><label for="input04">허가번호</label><span class="require"><span
+                                                class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td>
+                                        <input name="" value="" id="input04" class="input" type="text">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // block-field -->
+
+                    <div class="block-field">
+                        <h3 class="head-title-1">품목</h3>
+                        <p class="info-txt">선택품목수 : 0개</p>
+                        <div class="inline-between">
+                            <p class="check-txt">제조번호(Lot 번호) 항목은 복수입력시 ","로 분리하여 입력하세요.</p>
+                            <div class="inline-group">
+                                <button type="button" class="btn btn-primary">추적관리대상추가</button>
+                                <button type="button" class="btn btn-outline"><i class="ri ri-add-fill"></i>추가</button>
+                                <button type="button" class="btn btn-outline"><i
+                                        class="ri ri-subtract-fill"></i>삭제</button>
+                            </div>
+                        </div>
+                        <div class="scroll-box-row style-scroll">
+                            <table class="table table-view mt1">
+                                <caption>품목표 : 순번, 품목명, 공란, 품목허가번호, 분류번호, 등급, 제조원(수입의경우), 수출용에한함여부, 인체이식형의료기기여부를 안내합니다.
+                                </caption>
+                                <colgroup>
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="">순번</th>
+                                        <th scope="col" class="">품목</th>
+                                        <th scope="col" class=""></th>
+                                        <th scope="col">품목허가번호</th>
+                                        <th scope="col">분류번호</th>
+                                        <th scope="col" class="">등급</th>
+                                        <th scope="col" class="">제조원(수입의경우)</th>
+                                        <th scope="col" class="">수출용에한함여부</th>
+                                        <th scope="col" class="arr_on">인체이식형의료기기여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="warning-txt">주의 : 품목 삭제 시 모델명도 함께 삭제됩니다.</p>
+                    </div>
+                    <!-- // block-field -->
+
+                    <div class="block-field">
+                        <h3 class="head-title-1">이물발생 정보</h3>
+                        <table class="table table-view table-resp mt1">
+                            <caption>이물발생 정보표 : 보고일, 이물발견시점, 이물발견위치, 이물고정여부, 이물약액접촉여부, 이물종류, 세부내용, 이물혼입제품처리상태를 안내합니다.
+                            </caption>
+                            <colgroup>
+                                <col style="width:18%">
+                                <col style="width:32%">
+                                <col style="width:50%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label for="input05">보고일</label><span class="require"><span
+                                                class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td>
+                                        <input name="" value="" type="date" id="input05" class="input" placeholder=""
+                                            title="보고일 입력" disabled="" required="">
+                                    </td>
+                                    <td>
+                                        <div class="inline-group">
+                                            <label for="input06" class="form-label">인지일자</label>
+                                            <input name="" value="" type="date" id="input06" class="input"
+                                                placeholder="" title="인지일자 입력" required="">
+                                            <label for="input07" class="form-label">발생일자</label>
+                                            <input name="" value="" type="date" id="input07" class="input"
+                                                placeholder="" title="발생일자 입력" required="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이물발견시점<span class="require"><span class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="inline-group">
+                                            <input name="input_radio4" value="Y" id="input_radio12" type="radio"
+                                                class="radio"><label for="input_radio12">환자에게 적용 전</label>
+                                            <input name="input_radio4" value="Y" id="input_radio13" type="radio"
+                                                class="radio"><label for="input_radio13">환자에게 적용 후</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이물발견위치<span class="require"><span class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="inline-group">
+                                            <input name="input_radio5" value="Y" id="input_radio14" type="radio"
+                                                class="radio"><label for="input_radio14">제품 내부</label>
+                                            <input name="input_radio5" value="Y" id="input_radio15" type="radio"
+                                                class="radio"><label for="input_radio15">제품 외부</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이물고정여부<span class="require"><span class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="inline-group">
+                                            <input name="input_radio6" value="Y" id="input_radio16" type="radio"
+                                                class="radio"><label for="input_radio16">고정</label>
+                                            <input name="input_radio6" value="Y" id="input_radio17" type="radio"
+                                                class="radio"><label for="input_radio17">비고정</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이물약약접촉여부<span class="require"><span
+                                                class="blind">*필수입력</span></span></th>
+                                    <td colspan="3">
+                                        <div class="inline-group">
+                                            <input name="input_radio7" value="Y" id="input_radio18" type="radio"
+                                                class="radio"><label for="input_radio18">접촉</label>
+                                            <input name="input_radio7" value="Y" id="input_radio19" type="radio"
+                                                class="radio"><label for="input_radio19">비접촉</label>
+                                            <input name="input_radio7" value="Y" id="input_radio20" type="radio"
+                                                class="radio"><label for="input_radio20">해당사항 없음</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이물종류<span class="require"><span class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="inline-group mb1">
+                                            <input name="input_radio8" value="Y" id="input_radio21" type="radio"
+                                                class="radio"><label for="input_radio21">금속, 플라스틱 또는 제조공정 중 발생한 파편
+                                                등</label>
+                                            <input name="input_radio8" value="Y" id="input_radio22" type="radio"
+                                                class="radio"><label for="input_radio22">곤충 및 그 알, 기생충 및 그 알, 동물의 사채
+                                                등</label>
+                                            <input name="input_radio8" value="Y" id="input_radio23" type="radio"
+                                                class="radio"><label for="input_radio23">식품의약품안전처장이 정하여 고시하는 물질</label>
+                                            <input name="input_radio8" value="Y" id="input_radio24" type="radio"
+                                                class="radio"><label for="input_radio24">그 외 이물질</label>
+                                        </div>
+                                        <input name="" value="" class="input" type="text" title="그 외 이물질 입력">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="textarea01">세부내용</label><span class="require"><span
+                                                class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="textarea w100">
+                                            <textarea rows="4" cols="50" id="textarea01"
+                                                title="이물 종류, 발생 위치, 종류 등 상세 내용 개제" disabled=""></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="textarea02">이물혼입제품처리상태</label><span
+                                            class="require"><span class="blind">*필수입력</span></span></th>
+                                    <td colspan="3">
+                                        <div class="textarea w100">
+                                            <textarea rows="4" cols="50" id="textarea02"
+                                                title="제품보관(교환) 및 업체수거, 현장 폐기 등"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // block-field -->
+
+                    <div class="block-field">
+                        <h3 class="head-title-1">첨부자료</h3>
+                        <table class="table table-view table-resp mt1">
+                            <caption>첨부자료 : 첨부자료를 안내합니다.</caption>
+                            <colgroup>
+                                <col style="width:18%">
+                                <col style="width:82%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">첨부자료<span class="require"><span class="blind">*필수입력</span></span>
+                                    </th>
+                                    <td>
+                                        <div class="uploadFile-box">
+                                            <p>첨부파일 등록 시에는 <em class="fw700">[추가]</em>를 클릭하세요. (<em class="pen-txt">제품에
+                                                    이물이 혼입된 사진을 첨부</em>하여
+                                                주시기바랍니다.)
+                                            </p>
+                                            <p class="info-txt"><em class="fw700"> 지원확장자 :hwp, doc, pdf, fdf,
+                                                    xls,
+                                                    xlsx, ppt, pptx, dwg, bmp, jpg, tif, wmf, ico, wpg, pcx, tga, psd,
+                                                    img,
+                                                    gif, png 외 파일은 첨부 할 수 없습니다.</em></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="inline-between">
+                            <p class="info-txt">조회대기중</p>
+                            <div class="inline-group">
+                                <button type="button" class="btn btn-outline"><i class="ri ri-add-fill"></i>추가</button>
+                                <button type="button" class="btn btn-outline"><i
+                                        class="ri ri-subtract-fill"></i>삭제</button>
+                            </div>
+                        </div>
+                        <div class="scroll-box-row style-scroll">
+                            <table class="table table-view  mt1">
+                                <caption>첨부자료표 : 순번, 파일명, 파일보기, 상태를 안내합니다.</caption>
+                                <colgroup>
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">순번</th>
+                                        <th scope="col">파일명</th>
+                                        <th scope="col">파일보기</th>
+                                        <th scope="col">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                        <td>데이터 내용</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- // block-field -->
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="info">
+                    <div class="address">
+                        <ul>
+                            <li><span class="label">본사</span><span class="txt">(54596) 전라북도 익산시 중앙로121</span></li>
+                            <li><span class="label">서울</span><span class="txt">(06039) 서울특별시 강남구 도산대로 130</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="links">
+                        <a href="#" class="second-txt fw700">개인정보처리방침</a>
+                        <a href="#">저작권정책</a>
+                    </div>
+                    <div class="copyright">COPYRIGHT © 2025 HARIM. ALL RIGHTS RESERVED.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- // wrap -->
+</body>
+
+</html>

@@ -11,8 +11,9 @@
   border-spacing: 0;
   border-collapse: collapse;
   margin-bottom: 10px;
-  font-weight: 300;
+  font-weight: 400;
   box-sizing: border-box;
+  border-top: var(--border) solid rgba(0, 0, 0, 0.5)
 }
 
 .table.table-center {
@@ -46,6 +47,7 @@
   vertical-align: middle;
   border-bottom: var(--border) solid var(--bordercolor);
   border-right: var(--border) solid var(--bordercolor);
+  position: relative;
 }
 
 .table th:last-child,
@@ -55,8 +57,8 @@
 
 .table thead,
 .table tfoot {
-  white-space: nowrap;
-  border-top: var(--border) solid var(--bordercolor);
+  /* white-space: nowrap; */
+
 }
 
 .table thead th,
@@ -64,7 +66,7 @@
 .table tfoot td {
   background-color: var(--color-base-300);
   text-align: center;
-  border-top: var(--border) solid rgba(0, 0, 0, 0.5);
+  /* border-top: var(--border) solid rgba(0, 0, 0, 0.5); */
   font-weight: 600;
 }
 
@@ -89,10 +91,16 @@
   left: 0;
 }
 
+.table thead th.sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* .table thead tr,
 .table tbody tr:not(:last-child) {
   border-bottom: var(--border) solid rgba(var(--color-base-content), 0.05);
-} */
+} /*
 
 /* 제브라 스트라이프 스타일 */
 .table-zebra tbody tr:nth-child(even) {
@@ -136,4 +144,32 @@
 .table-lg th,
 .table-lg td {
   padding: 1em 1.25em;
+}
+
+.table.table-view {
+  border-top: solid 1px #333;
+}
+
+.table.table-view th,
+.table.table-view td {
+  border-left: var(--border) solid var(--bordercolor);
+  border-right: var(--border) solid var(--bordercolor);
+}
+
+.table.table-view th {
+  background-color: var(--color-base-300);
+  font-weight: 500;
+}
+
+@media (max-width:1000px) {
+
+  .table.table-resp,
+  .table.table-resp thead,
+  .table.table-resp tbody,
+  .table.table-resp tr,
+  .table.table-resp td,
+  .table.table-resp th {
+    display: block;
+    width: 100%;
+  }
 }

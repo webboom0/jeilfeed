@@ -34,18 +34,19 @@
 
 
 .select select {
-  margin-left: -1em;
-  margin-right: -1.75em;
+  /* padding-left: 0em; */
+  margin-right: -1.25em;
   width: calc(100% + 2.75em);
   appearance: none;
-  padding-left: 1em;
+  /* padding-left: 1em; */
   padding-right: 2.2em;
   height: calc(100% - 2px);
   background: inherit;
   border-radius: inherit;
   border-style: none;
   cursor: pointer;
-  background-color: transparent;
+  /* background-color: transparent; */
+  /* flex-grow: 1; */
 }
 
 .select select.wAuto {
