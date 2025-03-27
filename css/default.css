@@ -780,6 +780,17 @@ ul.b-list.bar li::before {
   width: calc(100% - 40px);
 }
 
+.dialog.dialog-full .inner {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: none;
+  max-width: none !important;
+  max-height: 90%;
+  border-radius: 0;
+}
+
 .dialog.large.open>* {
   max-width: 1280px;
 }
@@ -804,14 +815,31 @@ ul.b-list.bar li::before {
 }
 
 .dialog .head {
-  /* background: var(--color-secondary); */
-  /* background-color: #ededed; */
   padding: 2rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   color: #fff;
+  align-items: center;
+}
+
+.dialog .head .dialog-btn {
+  padding: 1rem;
+}
+
+.dialog .head .closeBtn::before {
+  content: "\eb98";
+  font-family: 'remixicon';
+}
+
+.dialog .head .fullBtn::before {
+  content: "\ed9c";
+  font-family: 'remixicon';
+}
+
+.dialog .head .fullBtn.toggle::before {
+  content: "\ed99";
 }
 
 .dialog .head .title {

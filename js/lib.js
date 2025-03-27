@@ -1,5 +1,5 @@
 /****** [ 상단이동] ******/
-const moveTop = function () {
+const moveTop = function() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
@@ -10,27 +10,27 @@ const selectForm = {
   selected: ".selected",
   option: ".option",
   item: ".opt-item",
-  init: function () {
+  init: function() {
     document.querySelectorAll(this.wrap).forEach((wrap) => {
-      wrap.querySelector(this.selected).addEventListener("click", function () {
+      wrap.querySelector(this.selected).addEventListener("click", function() {
         selectForm.inactive();
         wrap.classList.toggle("active");
       });
 
       wrap.querySelectorAll(this.item).forEach((item) => {
-        item.addEventListener("click", function () {
+        item.addEventListener("click", function() {
           selectForm.optionSelect(item);
         });
       });
     });
 
-    document.addEventListener("click", function (e) {
+    document.addEventListener("click", function(e) {
       if (!e.target.closest(selectForm.wrap)) {
         selectForm.inactive();
       }
     });
   },
-  inactive: function (wrap) {
+  inactive: function(wrap) {
     if (wrap) {
       wrap.classList.remove("active");
     } else {
@@ -39,7 +39,7 @@ const selectForm = {
       });
     }
   },
-  optionSelect: function (item) {
+  optionSelect: function(item) {
     const selectedText = item.getAttribute("data-value");
     const wrap = item.closest(this.wrap);
     const selectedElement = wrap.querySelector(this.selected);
@@ -64,7 +64,7 @@ const dialog = {
     document.querySelector(target).classList.add("open");
     document.querySelector(target).setAttribute("tabindex", "0");
     document.querySelector(target).focus();
-    document.querySelectorAll(".dialog").forEach(function (val, idx) {
+    document.querySelectorAll(".dialog").forEach(function(val, idx) {
       val.addEventListener("click", dialog.handler);
     });
   },
@@ -73,11 +73,24 @@ const dialog = {
     document.querySelector("body").classList.remove("scroll-hdn");
     document.querySelector(target).classList.remove("open");
     document.querySelector(target).removeAttribute("tabindex");
-    document.querySelectorAll(".dialog").forEach(function (val, idx) {
+    document.querySelectorAll(".dialog").forEach(function(val, idx) {
       val.removeEventListener("click", dialog.handler);
     });
   },
-  handler: function (e) {
+  full(e, target) {
+    dialog.target = target;
+
+    if (e.classList.contains("toggle")) {
+      document.querySelector(target).classList.remove("dialog-full");
+      e.classList.remove("toggle");
+      e.querySelector("span").textContent = "기본화면으로 보기";
+    } else {
+      document.querySelector(target).classList.add("dialog-full");
+      e.classList.add("toggle");
+      e.querySelector("span").textContent = "전체화면으로 보기";
+    }
+  },
+  handler: function(e) {
     if (!e.target.closest(".inner")) {
       dialog.close(dialog.target);
     }
@@ -92,7 +105,7 @@ const touchScroll = {
   init(sliderEl) {
     // sliderEl.style.cursor = "move";
     touchScroll.cursor(sliderEl);
-    $(window).resize(function () {
+    $(window).resize(function() {
       touchScroll.cursor(sliderEl);
     });
     sliderEl.addEventListener("mousedown", this.mousedownHandler.bind(this));
@@ -195,9 +208,9 @@ const tab = {
       const linkId = val.getAttribute("id");
       val.setAttribute("role", "tab");
       val.setAttribute("title", "선택됨");
-      val.classList.contains("active")
-        ? val.setAttribute("aria-selected", "true")
-        : val.setAttribute("aria-selected", "false");
+      val.classList.contains("active") ?
+        val.setAttribute("aria-selected", "true") :
+        val.setAttribute("aria-selected", "false");
       container.querySelector(target).setAttribute("role", "tabpanel");
       container.querySelector(target).setAttribute("aria-labelledby", linkId);
     });
@@ -223,7 +236,7 @@ const scrollTab = {
       btn.addEventListener("click", this.clickHandler.bind(this));
       tabBox.append(btn);
 
-      window.addEventListener("resize", function () {
+      window.addEventListener("resize", function() {
         scrollTab.setTop();
       });
     });
@@ -245,9 +258,9 @@ const scrollTab = {
     const wrapHeight = document.querySelector(".wrap").clientHeight;
     const bodyHeight = document.body.clientHeight;
     let findIdx =
-      this.topArr.findIndex(isLargeNumber) < 0
-        ? this.topArr.length
-        : this.topArr.findIndex(isLargeNumber);
+      this.topArr.findIndex(isLargeNumber) < 0 ?
+      this.topArr.length :
+      this.topArr.findIndex(isLargeNumber);
 
     if (scrollTop < this.topArr[0]) {
       findIdx = 0;
@@ -330,7 +343,7 @@ const dropMenu = {
 };
 /***** [ 상단 사이트맵(전체메뉴) ] *******/
 const totalMenu = {
-  open: function () {
+  open: function() {
     document.querySelector("#gnb").classList.add("allMenuActive", "active");
     // document.querySelector(".header.gnbActive").classList.remove("gnbActive");
     document.querySelector("#gnb").setAttribute("tabindex", "0");
@@ -338,7 +351,7 @@ const totalMenu = {
     document.querySelector(".header").classList.add("allMenuActive");
     gnb.set();
   },
-  close: function () {
+  close: function() {
     document.querySelector("#gnb").classList.remove("allMenuActive", "active");
     document.querySelector(".header").classList.remove("gnbActive");
     document.querySelector("#gnb").removeAttribute("tabindex");
@@ -346,7 +359,7 @@ const totalMenu = {
   },
 };
 /***** [ 검색 보이기/안보기 ] *******/
-const searchToggle = function () {
+const searchToggle = function() {
   document.querySelector(".search-wrap").classList.toggle("close");
   const txt = document.querySelector(".search-wrap .head-group .txt");
   if (txt.textContent === "펼치기") {
@@ -356,7 +369,7 @@ const searchToggle = function () {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   //dropMenu
   dropMenu.init();
   // tab기능 실행
@@ -367,7 +380,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("table tr.sort-tr").forEach((tr) => {
     tr.querySelectorAll("th:not(.nosrot)").forEach((th) => {
       th.classList.add("up", "down");
-      th.addEventListener("click", function (e) {
+      th.addEventListener("click", function(e) {
         e.preventDefault();
         const cell = e.currentTarget;
         console.log(
