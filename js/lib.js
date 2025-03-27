@@ -299,7 +299,6 @@ const dropMenu = {
   activeMenu: null,
   init: () => {
     const $wrap = document.querySelectorAll(dropMenu.wrap);
-    // const $btn = $wrap.querySelectorAll(dropMenu.btn);
     $wrap.forEach((item) => {
       if (
         item.querySelector(dropMenu.btn).querySelectorAll("span").length <= 0
@@ -311,17 +310,17 @@ const dropMenu = {
       }
 
       item.querySelector(dropMenu.btn).addEventListener("click", (e) => {
-        const $target = e.target;
+        const $target = e.currentTarget;
         dropMenu.actvieMenu = e.target.closest(dropMenu.wrap);
 
         // 선택된 드롭메뉴 토글기능
         if (!dropMenu.actvieMenu.classList.contains("active")) {
           dropMenu.dropMenuClose();
           dropMenu.actvieMenu.classList.add("active");
-          $target.querySelector("span").innerHTML = "닫기";
+          $target.querySelector("span").textContent = "닫기";
         } else {
           dropMenu.actvieMenu.classList.remove("active");
-          $target.querySelector("span").innerHTML = "열기";
+          $target.querySelector("span").textContent = "열기";
         }
       });
     });
@@ -383,9 +382,6 @@ document.addEventListener("DOMContentLoaded", function() {
       th.addEventListener("click", function(e) {
         e.preventDefault();
         const cell = e.currentTarget;
-        console.log(
-          cell.classList.contains("up") && cell.classList.contains("down"),
-        );
         if (cell.classList.contains("up") && cell.classList.contains("down")) {
           cell.classList.remove("down");
         } else if (cell.classList.contains("up")) {

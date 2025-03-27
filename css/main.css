@@ -93,7 +93,6 @@ body.hdn-scroll {
 
 .visual-section .links ul li a {
   display: flex;
-  /* padding: 5rem 4.2rem; */
   padding: var(--padding);
   border-radius: 1.2rem;
   color: #fff;

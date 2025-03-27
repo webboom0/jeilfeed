@@ -442,9 +442,7 @@
 
 .organization-group .organization ul {
   display: flex;
-  /* flex-direction: column; */
   gap: 1rem;
-  /* max-width: 20em; */
   width: 100%;
   position: relative;
   margin-top: 1.5rem;
@@ -796,7 +794,6 @@
 
 .buisiness-list-wrap .search-wrap {
   background-color: #fafafa;
-  /* padding: 2rem; */
   border: solid 1px var(--color-border);
   border-radius: .8rem;
   width: 480px;

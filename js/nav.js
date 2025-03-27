@@ -10,7 +10,7 @@ const gnb = {
   dep2WdArr: [],
   dep2HeightArr: [],
   gnbWidth: 1200,
-  init: function () {
+  init: function() {
     const gnbElement = document.querySelector(this.gnbEl);
 
     // gnb 요소 전체 마우스 오버 이벤트
@@ -94,11 +94,11 @@ const gnb = {
     }
     //  사이드 메뉴 닫기
     document.querySelectorAll(".sideMenuCloseBtn").forEach((btn) => {
-      btn.addEventListener("click", function () {
-        document.body.classList.remove("sideMenuOpen");
-        comp.modal.remove();
+      btn.addEventListener("click", function() {
+        document.body.classList.remove("sideMenuOpen", "modal");
       });
     });
+
     function slideDown(element, duration = 400) {
       element.style.removeProperty("display");
       let display = window.getComputedStyle(element).display;
@@ -155,7 +155,7 @@ const gnb = {
       }, duration);
     }
   },
-  set: function () {
+  set: function() {
     const gnbElement = document.querySelector(this.gnbEl);
     // 2차메뉴 배경 요소 추가
     if (!gnbElement.querySelector(".panel")) {
@@ -177,6 +177,7 @@ const gnb = {
 
     // 2차메뉴 스타일 지정
     depthStyle();
+
     function depthStyle() {
       // 2차메뉴 배경 요소 높이 설정
       gnbElement.querySelector(".panel").style.height = gnb.maxHeight + "px";
@@ -187,7 +188,7 @@ const gnb = {
       });
     }
   },
-  reset: function () {
+  reset: function() {
     const gnbElement = document.querySelector(this.gnbEl);
     gnbElement
       .querySelectorAll(gnb.depth[0])
@@ -204,7 +205,7 @@ const gnb = {
       .forEach((el) => el.classList.remove("toggle"));
     document.querySelectorAll("#gnb .etcMenu").forEach((el) => el.remove());
   },
-  pcReset: function () {
+  pcReset: function() {
     const gnbElement = document.querySelector("#gnb");
     gnbElement
       .querySelectorAll(gnb.depth[0])
@@ -220,13 +221,13 @@ const gnb = {
   },
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   // gnb 메뉴 활성화
   gnb.init();
 
   // 사이드 메뉴 활성화
   document.querySelectorAll(".sideMenuBtn").forEach((btn) => {
-    btn.addEventListener("click", function (e) {
+    btn.addEventListener("click", function(e) {
       document.body.classList.add("sideMenuOpen", "modal");
       document.querySelectorAll("#gnb .etcMenu").forEach((el) => el.remove());
       const etcMenu = document.querySelector(".header .etcMenu");
@@ -239,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   windowRsize();
   // window resize 해상도가 변경될 때
-  window.addEventListener("resize", function () {
+  window.addEventListener("resize", function() {
     windowRsize();
   });
 

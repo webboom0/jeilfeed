@@ -1125,13 +1125,3 @@ ul.b-list.bar li::before {
   gap: 1.5rem;
   align-items: center;
 }
-
-/* .require::before {
-  content: "\f186";
-  font-family: "remixicon";
-  position: absolute;
-  right: .5rem;
-  top: .5rem;
-  color: var(--color-primary);
-  font-size: 10px;
-} */
