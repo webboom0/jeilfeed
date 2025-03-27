@@ -344,7 +344,6 @@ const dropMenu = {
 const totalMenu = {
   open: function() {
     document.querySelector("#gnb").classList.add("allMenuActive", "active");
-    // document.querySelector(".header.gnbActive").classList.remove("gnbActive");
     document.querySelector("#gnb").setAttribute("tabindex", "0");
     document.querySelector("#gnb").focus();
     document.querySelector(".header").classList.add("allMenuActive");

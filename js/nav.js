@@ -1,6 +1,4 @@
-/****** [ gnb ]
- * comp.modal 기능이 있어야 함.
- */
+/****** [ gnb ] ******/
 const gnb = {
   mode: "pc", // 해상도 모드 변수
   gnbEl: "#gnb", // gnb 요소 선택자 변수
