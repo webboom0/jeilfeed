@@ -10,75 +10,118 @@
 @import url(textarea.css);
 
 :root {
-    /* Base Colors */
-    --color-base-100: rgba(255, 255, 255, 1);
-    --color-base-200: rgba(250, 250, 250, 1);
-    --color-base-300: rgba(242, 242, 242, 1);
-    --color-base-content: rgb(54, 54, 54, 1);
+  /* Base Colors */
+  --color-base-100: rgba(255, 255, 255, 1);
+  --color-base-200: rgba(250, 250, 250, 1);
+  --color-base-300: rgba(242, 242, 242, 1);
+  --color-base-content: rgb(54, 54, 54, 1);
 
-    /* Accent Colors */
-    --color-accent: rgba(99, 195, 218, 1);
-    --color-accent-content: rgba(47, 97, 108, 1);
-    /* Neutral Colors */
-    --color-neutral: rgba(36, 36, 36, 1);
-    --color-neutral-content: rgba(234, 234, 234, 1);
+  /* Accent Colors */
+  --color-accent: rgba(99, 195, 218, 1);
+  --color-accent-content: rgba(47, 97, 108, 1);
+  /* Neutral Colors */
+  --color-neutral: rgba(36, 36, 36, 1);
+  --color-neutral-content: rgba(234, 234, 234, 1);
 
-    /* Info Colors */
-    --color-info: rgba(99, 159, 245, 1);
-    --color-info-content: rgba(37, 59, 91, 1);
+  /* Info Colors */
+  --color-info: rgba(99, 159, 245, 1);
+  --color-info-content: rgba(37, 59, 91, 1);
 
-    /* Success Colors */
-    --color-success: rgba(132, 217, 143, 1);
-    --color-success-content: rgba(49, 94, 54, 1);
+  /* Success Colors */
+  --color-success: rgba(132, 217, 143, 1);
+  --color-success-content: rgba(49, 94, 54, 1);
 
-    /* Warning Colors */
-    --color-warning: rgba(247, 212, 89, 1);
-    --color-warning-content: rgba(120, 89, 25, 1);
+  /* Warning Colors */
+  --color-warning: rgba(247, 212, 89, 1);
+  --color-warning-content: rgba(120, 89, 25, 1);
 
-    /* Error Colors */
-    --color-error: rgba(239, 68, 68, 1);
-    --color-error-content: rgba(91, 25, 25, 1);
+  /* Error Colors */
+  --color-error: rgba(239, 68, 68, 1);
+  --color-error-content: rgba(91, 25, 25, 1);
 
-    --radius-selector: 0.5em;
-    --radius-field: 0.25em;
-    --radius-box: 0.5em;
-    --size-selector: 0.25em;
-    --size-field: 0.25em;
-    --size: calc(var(--size-field, 0.25em) * 10);
-    --border: 1px;
-    --depth: 1;
-    --noise: 0;
-    --join-ss: 0.25em;
-    --join-se: 0.25em;
-    --join-es: 0.25em;
-    --join-ee: 0.25em;
-    --fontsize: 1em;
-    --fontfamily: "Pretendard", "맑은고딕", "Malgun Gothic", "돋움", "Dotum",
-        sans-serif;
-    --z-1: 1;
-    --color-border: #D8D8D8;
-    --font-root: 10px;
+  --radius-selector: 0.5em;
+  --radius-field: 0.25em;
+  --radius-box: 0.5em;
+  --size-selector: 0.25em;
+  --size-field: 0.25em;
+  --size: calc(var(--size-field, 0.25em) * 10);
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+  --join-ss: 0.25em;
+  --join-se: 0.25em;
+  --join-es: 0.25em;
+  --join-ee: 0.25em;
+  --fontsize: 1em;
+  --fontfamily: "Pretendard", "맑은고딕", "Malgun Gothic", "돋움", "Dotum",
+    sans-serif;
+  --z-1: 1;
+  --color-border: #D8D8D8;
+  --font-root: 10px;
 }
 
+/* form */
 .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .form-field.inline {
-    flex-direction: row;
-    align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
 
 .form-field input[type=text],
 .form-field input[type=password],
 .form-field textarea,
 .form-field .btn {
-    width: 100%;
+  width: 100%;
 }
 
 .form-field.inline .btn {
-    width: auto;
-    flex-grow: 1;
+  width: auto;
+  flex-grow: 1;
+}
+
+/* badge */
+.badge {
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: .3em .7em;
+  border-radius: 5rem;
+  background-color: var(--btn-color);
+  color: var(--btn-fg);
+  --btn-color: #ededed;
+  --btn-fg: #333;
+}
+
+.badge-accent {
+  --btn-color: var(--color-accent);
+  --btn-fg: var(--color-accent-content);
+}
+
+.badge-neutral {
+  --btn-color: var(--color-neutral);
+  --btn-fg: var(--color-neutral-content);
+}
+
+.badge-info {
+  --btn-color: var(--color-info);
+  --btn-fg: var(--color-info-content);
+}
+
+.badge-success {
+  --btn-color: var(--color-success);
+  --btn-fg: var(--color-success-content);
+}
+
+.badge-warning {
+  --btn-color: var(--color-warning);
+  --btn-fg: var(--color-warning-content);
+}
+
+.badge-error {
+  --btn-color: var(--color-error);
+  --btn-fg: var(--color-error-content);
 }
