@@ -27,18 +27,13 @@
 .gnb>ul {
   position: absolute;
   z-index: 2;
-  /* background-color: #fff; */
   left: 50%;
   top: 3px;
   transform: translateX(-50%);
   transition: all .5s ease 0s;
   width: var(--gnbWd);
-}
-
-.gnb>ul {
   display: flex;
   height: calc(100% - 3px);
-  /* position: relative; */
 }
 
 .gnb ul>li {
@@ -284,6 +279,10 @@
     transition: all .5s ease-out 0s;
   }
 
+  .gnb>ul {
+    transition: none;
+  }
+
   .sideMenuOpen .header {
     position: static;
   }
@@ -369,6 +368,7 @@
     padding-bottom: 20px;
     opacity: 1 !important;
     transform: none;
+    transition: all .5s ease-in-out 0s;
   }
 
   .gnb .depth-2>li>a {

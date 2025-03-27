@@ -1,6 +1,70 @@
-/****** [ 상단이동] ******/
-const moveTop = function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+const comp = {
+  /****** [ 상단이동 ] ******/
+  moveTop: function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  },
+
+  /****** [ modal ] ******/
+  modal: {
+    modalClickable: "true", // data-modalClickable 속성이 true 이면 modalPanel 클릭시 modal 삭제
+    dialog: "", // 다이어로그 요소
+    init: function (el) {
+      this.dialog = el.getAttribute("data-dialog") || "";
+
+      // 다이어로그 있을 경우 활성화
+      if (this.dialog !== "") {
+        let dialog = document.querySelector(this.dialog);
+        this.modalDialog(dialog);
+      } else {
+        this.toggleModal(el.getAttribute("data-modalClickable"));
+      }
+    },
+    modalDialog: function (dialogEl) {
+      dialogEl.classList.add("active");
+
+      // 다이어로그 내 닫기버튼 클릭시 모달-다이어로그 비활성화
+      dialogEl.querySelectorAll("[data-close='dialog']").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          dialogEl.classList.remove("active");
+          comp.modal.remove();
+        });
+      });
+      comp.modal.toggleModal("true");
+    },
+    modalClick: function (c) {
+      if (c === "true") {
+        document.querySelectorAll(".modal .modalPanel").forEach((panel) => {
+          panel.addEventListener("click", function () {
+            comp.modal.remove();
+          });
+        });
+      }
+    },
+    toggleModal: function (clickable = "true") {
+      // modal 유무 체크 없을 경우 .active 추가 (활성화) / 있을 경우 .active 삭제 (비활성화)
+      if (!document.body.classList.contains("modal")) {
+        document.body.classList.add("modal");
+        const modalPanel = document.createElement("div");
+        modalPanel.className = "modalPanel";
+        document.body.appendChild(modalPanel);
+        this.modalClick(clickable);
+      } else {
+        comp.modal.remove();
+      }
+    },
+    // 모달 비활성화
+    remove: function () {
+      document.body.classList.remove("modal");
+      const modalPanel = document.querySelector(".modalPanel");
+      if (modalPanel) {
+        modalPanel.remove();
+      }
+      document.querySelectorAll(".modal-dialog.active").forEach((dialog) => {
+        dialog.classList.remove("active");
+      });
+    },
+  },
 };
 
 /****** [ select-form ] ******/
@@ -362,27 +426,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // tab기능 실행
   document.querySelectorAll('*[data-tab="tab"]').forEach((el) => {
     tab.init(el);
-  });
-  // table sort 기능
-  document.querySelectorAll("table tr.sort-tr").forEach((tr) => {
-    tr.querySelectorAll("th:not(.nosrot)").forEach((th) => {
-      th.classList.add("up", "down");
-      th.addEventListener("click", function (e) {
-        e.preventDefault();
-        const cell = e.currentTarget;
-        console.log(
-          cell.classList.contains("up") && cell.classList.contains("down"),
-        );
-        if (cell.classList.contains("up") && cell.classList.contains("down")) {
-          cell.classList.remove("down");
-        } else if (cell.classList.contains("up")) {
-          cell.classList.remove("up");
-          cell.classList.add("down");
-        } else if (cell.classList.contains("down")) {
-          cell.classList.add("up");
-        }
-      });
-    });
   });
 
   // scroll-x touch scroll

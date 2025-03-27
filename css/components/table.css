@@ -55,12 +55,6 @@
   border-right: none;
 }
 
-.table thead,
-.table tfoot {
-  /* white-space: nowrap; */
-
-}
-
 .table thead th,
 .table tfoot th,
 .table tfoot td {
@@ -96,11 +90,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
-/* .table thead tr,
-.table tbody tr:not(:last-child) {
-  border-bottom: var(--border) solid rgba(var(--color-base-content), 0.05);
-} /*
 
 /* 제브라 스트라이프 스타일 */
 .table-zebra tbody tr:nth-child(even) {
@@ -146,6 +135,8 @@
   padding: 1em 1.25em;
 }
 
+/* table-vie */
+
 .table.table-view {
   border-top: solid 1px #333;
 }
@@ -172,4 +163,33 @@
     display: block;
     width: 100%;
   }
+}
+
+/* sort-tr */
+.table .sort-tr>*:not(.nosrot) {
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+}
+
+.table .sort-tr>*:not(.nosrot).down::before,
+.table .sort-tr>*:not(.nosrot).up::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+.table .sort-tr>*:not(.nosrot).down::before {
+  border-top: 3px solid #aaa;
+  transform: translateY(calc(50% + 2px));
+}
+
+.table .sort-tr>*:not(.nosrot).up::after {
+  border-bottom: 3px solid #aaa;
+  transform: translateY(calc(-50% - 2px));
 }
