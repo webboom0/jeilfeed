@@ -3,11 +3,11 @@ const gnb = {
   mode: "pc", // 해상도 모드 변수
   gnbEl: "#gnb", // gnb 요소 선택자 변수
   depth: [".depth-1", ".depth-2"], // depth별 링크 선택자 배열 지정
-  maxWidth: 200,
+  maxWidth: 150,
   maxHeight: 0,
   dep2WdArr: [],
   dep2HeightArr: [],
-  gnbWidth: 1200,
+  gnbWidth: 1100,
   init: function() {
     const gnbElement = document.querySelector(this.gnbEl);
 
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
       gnb.mode = "mobile";
       gnb.pcReset();
     } else if (
-      window.matchMedia(`screen and (max-width: ${gnb.gnbWidth}px)`).matches
+      window.matchMedia(`screen and (max-width: 1200px`).matches
     ) {
       document.body.classList.add("mode-middle");
       gnb.mode = "middle";
@@ -261,4 +261,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     gnb.reset();
   }
-});
+})
