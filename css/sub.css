@@ -164,6 +164,7 @@
   background-image: url(../images/icon_print.svg);
 }
 
+
 .sub-title {
   font-size: var(--txt-xl-1);
   margin-bottom: 2rem;
@@ -974,6 +975,32 @@
   font-size: var(--txt-lg-2);
   font-weight: 500;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  transition: all .5s ease-in-out 0s;
+}
+
+.join-step1-group .links a:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .2);
+}
+
+.join-step1-group .links .icon {
+  position: relative;
+  display: block;
+  width: 50%;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50%;
+  background-color: #fafafa;
+}
+
+.join-step1-group .links .icon.building {
+  background-image: url(../images/icon_building.svg);
+}
+
+.join-step1-group .links .icon.user {
+  background-image: url(../images/icon_user.svg);
 }
 
 @media (max-width: 780px) {
