@@ -22,6 +22,16 @@
   background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
 }
 
+.header.gnbActive,
+.header.allMenuActive {
+  background: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 100%) !important;
+  color: #fff;
+}
+
+.header.gnbActive .logo a {
+  background-image: url(../images/logo_wh.svg);
+}
+
 .header.transparent:not(.gnbActive) {
   position: fixed;
   color: #fff;
@@ -54,12 +64,7 @@
 }
 
 .header.allMenuActive .logo a {
-  background-image: url(../images/logo.svg ) !important;
-}
-
-.header.allMenuActive .etcMenu a,
-.header.allMenuActive .etcMenu i {
-  color: #333 !important;
+  background-image: url(../images/logo_wh.svg ) !important;
 }
 
 .header .etcMenu>* {
@@ -78,7 +83,7 @@
 
 .header .etcMenu i {
   font-size: 1.6em;
-  color: #333;
+  color: inherit;
 }
 
 .header .etcMenu {

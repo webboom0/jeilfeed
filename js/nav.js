@@ -165,7 +165,6 @@ const gnb = {
     const wd = gnb.gnbWidth / length;
     // 2차메뉴 max 높이,가로 체크 후 위치, 사이즈 조절
     gnbElement.querySelectorAll(gnb.depth[1]).forEach((el, i) => {
-      el.style.width = wd + "px";
       gnb.dep2HeightArr.push(el.offsetHeight);
     });
     gnb.maxHeight = Math.max(...gnb.dep2HeightArr);
@@ -179,6 +178,7 @@ const gnb = {
     function depthStyle() {
       // 2차메뉴 배경 요소 높이 설정
       gnbElement.querySelector(".panel").style.height = gnb.maxHeight + "px";
+
 
       // 2차메뉴 가로/세로사이즈, 위치 조절
       gnbElement.querySelectorAll(gnb.depth[1]).forEach((el) => {
