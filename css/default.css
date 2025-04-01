@@ -966,3 +966,114 @@ body *::-webkit-scrollbar-track {
   padding: 2rem;
   border: solid 1px var(--color-border);
 }
+
+/* 페이징 */
+*.pagination {
+  margin-top: 3rem
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.7rem;
+  text-align: center
+}
+
+.pagination a {
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: .6rem;
+  color: #151515;
+  transition: all 0.3s
+}
+
+.pagination a.nav {
+  border: 1px solid #E5EBF0;
+  font-size: 0;
+}
+
+.pagination a.nav::before,
+.pagination a.nav::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: remixicon;
+  font-size: 2.0rem;
+  width: 5px;
+}
+
+.pagination a.nav.first::before {
+  content: "\f2e3";
+}
+
+.pagination a.nav.start::before {
+  content: "\f2e3";
+}
+
+.pagination a.nav.last::before {
+  content: "\f2e4";
+}
+
+.pagination a.nav.end::before {
+  content: "\f2e4";
+}
+
+.pagination a.nav.prev::before {
+  content: "\ea64";
+}
+
+.pagination a.nav.next::before {
+  content: "\ea6e";
+}
+
+.pagination a.on {
+  background: var(--color-secondary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.pagination a.total {
+  display: none;
+}
+
+@media (max-width:1024px) {
+  .pagination a {
+    display: none;
+  }
+
+  .pagination a.nav {
+    display: flex;
+  }
+
+  .pagination a.on,
+  .pagination a.total {
+    display: inline-flex;
+    width: inherit;
+    border-color: transparent;
+    background: none;
+    color: #151515;
+  }
+
+  .pagination a.on::after {
+    content: "/";
+    font-weight: 300;
+    margin-left: 0.5rem;
+  }
+
+  .pagination a.on {
+    margin-left: 1rem;
+  }
+
+  .pagination a.total {
+    margin-right: 1rem;
+  }
+
+}
