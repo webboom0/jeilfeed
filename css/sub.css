@@ -312,7 +312,7 @@
 
 .icons-list li {
   width: 100%;
-  align-self: 1/1;
+  /*  aspect-ratio: 1/1;*/
   border: solid 1px var(--color-border);
   border-radius: 0.8rem;
   display: flex;
@@ -1124,5 +1124,280 @@
     width: 100%;
     height: 1px;
     top: 6px;
+  }
+}
+
+/* 진행절차 */
+.procedure-gorup {
+  background-color: #fafafa;
+  border-radius: .8rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.procedure-gorup ol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*  grid-template-rows: repeat(2, 1fr);*/
+  width: 1000px;
+}
+
+.procedure-gorup ol li {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.procedure-gorup ol li::before {
+  content: "\ea6c";
+  font-family: "remixicon";
+  font-size: 3rem;
+  position: absolute;
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.procedure-gorup ol li .group {
+  border: solid 1px var(--color-border);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  width: 80%;
+  aspect-ratio: 1/1;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .04);
+}
+
+.procedure-gorup ol li .step {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  padding: .5rem 1.2rem;
+  border-radius: .4rem;
+}
+
+.procedure-gorup ol li:nth-child(even) .step {
+  background-color: var(--color-secondary);
+}
+
+.procedure-gorup ol li .step-icon img {
+  height: 50px;
+  max-width: 50px;
+  object-fit: contain;
+}
+
+.procedure-gorup .txt {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.procedure-gorup ol li:nth-child(5) {
+  order: 8;
+}
+
+.procedure-gorup ol li:nth-child(6) {
+  order: 7;
+}
+
+.procedure-gorup ol li:nth-child(7) {
+  order: 6;
+}
+
+.procedure-gorup ol li:nth-child(8) {
+  order: 5;
+}
+
+@media (min-width: 979px) {
+  .procedure-gorup ol li:nth-child(4)::before {
+    top: 100%;
+    right: auto;
+    left: auto;
+    transform-origin: bottom;
+    transform: translateY(-100%) translateX(-50%) rotate(90deg);
+  }
+
+  .procedure-gorup ol li:nth-child(5)::before,
+  .procedure-gorup ol li:nth-child(6)::before,
+  .procedure-gorup ol li:nth-child(7)::before {
+    left: -1.5rem;
+    right: auto;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.procedure-gorup ol li:nth-child(8)::before {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .procedure-gorup {
+    padding: 2rem;
+  }
+
+  .procedure-gorup ol {
+    width: 100%;
+  }
+
+  .procedure-gorup ol li {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 980px) and (min-width: 779px) {
+  .procedure-gorup ol {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .procedure-gorup ol li:nth-child(4) {
+    order: 6;
+  }
+
+  .procedure-gorup ol li:nth-child(5) {
+    order: 5;
+  }
+
+  .procedure-gorup ol li:nth-child(6) {
+    order: 4;
+  }
+
+  .procedure-gorup ol li:nth-child(7) {
+    order: 7;
+  }
+
+  .procedure-gorup ol li:nth-child(8) {
+    order: 8;
+  }
+
+  .procedure-gorup ol li:nth-child(3)::before,
+  .procedure-gorup ol li:nth-child(6)::before {
+    top: 100%;
+    right: auto;
+    left: auto;
+    transform-origin: bottom;
+    transform: translateY(-100%) translateX(-50%) rotate(90deg);
+  }
+
+  .procedure-gorup ol li:nth-child(4)::before,
+  .procedure-gorup ol li:nth-child(5)::before {
+    left: -1.5rem;
+    right: auto;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+}
+
+
+@media (max-width: 780px) and (min-width: 479px) {
+  .procedure-gorup ol {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .procedure-gorup ol li .group {
+    aspect-ratio: auto;
+    padding: 3rem;
+  }
+
+  .procedure-gorup ol li:nth-child(3) {
+    order: 4;
+  }
+
+  .procedure-gorup ol li:nth-child(4) {
+    order: 3;
+  }
+
+  .procedure-gorup ol li:nth-child(5) {
+    order: 5;
+  }
+
+  .procedure-gorup ol li:nth-child(6) {
+    order: 6;
+  }
+
+  .procedure-gorup ol li:nth-child(7) {
+    order: 8;
+  }
+
+  .procedure-gorup ol li:nth-child(8) {
+    order: 7;
+  }
+
+  .procedure-gorup ol li:nth-child(even)::before {
+    top: 100%;
+    right: auto;
+    left: auto;
+    transform-origin: bottom;
+    transform: translateY(-100%) translateX(-50%) rotate(90deg);
+  }
+
+  .procedure-gorup ol li:nth-child(3)::before,
+  .procedure-gorup ol li:nth-child(7)::before {
+    left: -1.5rem;
+    right: auto;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .procedure-gorup .info-txt {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .procedure-gorup ol {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .procedure-gorup ol li .group {
+    aspect-ratio: auto;
+    padding: 4rem;
+  }
+
+  .procedure-gorup ol li:nth-child(3) {
+    order: 3;
+  }
+
+  .procedure-gorup ol li:nth-child(4) {
+    order: 4;
+  }
+
+  .procedure-gorup ol li:nth-child(5) {
+    order: 5;
+  }
+
+  .procedure-gorup ol li:nth-child(6) {
+    order: 6;
+  }
+
+  .procedure-gorup ol li:nth-child(7) {
+    order: 7;
+  }
+
+  .procedure-gorup ol li:nth-child(8) {
+    order: 8;
+  }
+
+  .procedure-gorup ol li::before {
+    top: 100%;
+    right: auto;
+    left: auto;
+    transform-origin: bottom;
+    transform: translateY(-100%) translateX(-50%) rotate(90deg);
+  }
+
+  .procedure-gorup .info-txt {
+    text-align: left !important;
   }
 }
