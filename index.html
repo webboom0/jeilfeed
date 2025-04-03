@@ -144,10 +144,10 @@
             </div>
             <div class="links container">
               <ul class="">
-                <li><a href="#" class="secondary"><i class="icon i1"></i><span>수의방역센터<br>의뢰서
+                <li><a href="#" class="primay"><i class="icon i1"></i><span>수의방역센터<br>의뢰서
                       바로가기</span></a>
                 </li>
-                <li><a href="#" class="primay"><i class="icon i2"></i><span>화학분석센터<br>의뢰서
+                <li><a href="#" class="secondary"><i class="icon i2"></i><span>화학분석센터<br>의뢰서
                       바로가기</span></a>
                 </li>
               </ul>
@@ -265,7 +265,7 @@
         </div>
         <div class="bottom">
           <div class="links">
-            <a href="#" class="second-txt fw700">개인정보처리방침</a>
+            <a href="#" class="black-txt fw700">개인정보처리방침</a>
             <a href="#">저작권정책</a>
           </div>
           <div class="copyright">COPYRIGHT © 2025 HARIM. ALL RIGHTS RESERVED.</div>
@@ -274,6 +274,58 @@
     </footer>
   </div>
   <!-- // wrap -->
+  <!-- 팝업 다이어로그 -->
+  <div id="dialog-popup" class="dialog">
+    <div class="inner">
+      <div class="body">
+        <div class="swiper swiepr-popup">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="https:naver.com"><img src="images/popup.png" alt=""></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="https:naver.com"><img src="images/popup.png" alt=""></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="https:naver.com"><img src="images/popup.png" alt=""></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="https:naver.com"><img src="images/popup.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="popup-button-next"><i class="ri-arrow-right-wide-line"></i><span class="blind">다음</span></button type="button">
+        <button type="button" class="popup-button-prev"><i class="ri-arrow-left-wide-line"></i><span class="blind">이전</span></button type="button">
+      </div>
+      <div class="foot">
+        <div class="check-group">
+          <input type="checkbox" id="popupCloseCheck" class="checkbox" onchange="cookieCheck(this);">
+          <label for="popupCloseCheck">오늘하루 그만 보기</label>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="dialog.close('#dialog-popup')"><i class='ri-close-fill'></i><span>닫기</span></button>
+      </div>
+    </div>
+    <script>
+    var popupSwiper = new Swiper(".swiepr-popup", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".popup-button-next",
+        prevEl: ".popup-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+    </script>
+  </div>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     let sectionSwiper;
@@ -366,6 +418,24 @@
     swiperResponsive();
     window.addEventListener('resize', swiperResponsive);
   });
+
+  // 로컬 스토리지에서 팝업 정보를 가져옴
+  function cookieCheck(e) {
+    if (e.checked === true) {
+      // 동의시 로컬 스토리지에 저장
+      localStorage.setItem("popupClose", true);
+    } else {
+      localStorage.removeItem("popupClose");
+    }
+  }
+  $(function() {
+    let popupClose = localStorage.getItem("popupClose");
+    if (!popupClose) {
+      dialog.open("#dialog-popup")
+    } else {
+      dialog.close("#dialog-popup")
+    }
+  })
   </script>
 </body>
 

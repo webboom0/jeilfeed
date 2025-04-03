@@ -15,6 +15,7 @@
   height: var(--size);
   color: #000;
   position: relative;
+  background-color: #fff;
 }
 
 .radio:before {

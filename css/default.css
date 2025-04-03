@@ -6,20 +6,27 @@
 @import url(components/components.css);
 
 @font-face {
-  font-family: "Paperlogy-6SemiBold";
-  src: url("fonts/Paperlogy-6SemiBold.woff2") format("woff2");
-  font-weight: 800;
+  font-family: "harimr";
+  src: url("fonts/harimr.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "harimr";
+  src: url("fonts/harimb.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 :root {
   /* Primary Colors */
   --color-primary: rgba(225, 2, 20, 1);
-  --color-primary-content: rgba(234, 234, 234, 1);
+  --color-primary-content: rgba(255, 255, 255, 1);
 
   /* Secondary Colors */
-  --color-secondary: rgba(0, 77, 159, 1);
-  --color-secondary-content: rgba(234, 234, 234, 1);
+  --color-secondary: rgba(255, 176, 52, 1);
+  --color-secondary-content: rgba(255, 255, 255, 1);
 
   /* border Color */
   --color-border: #d8d8d8;
@@ -101,7 +108,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.3;
   font-weight: 400;
-  font-family: Pretendard, sans-serif;
+  font-family: harimr, sans-serif;
   word-break: keep-all;
 }
 
@@ -349,6 +356,10 @@ input[type="checkbox"]:focus+label {
   color: var(--color-secondary);
 }
 
+.black-txt {
+  color: #000;
+}
+
 .pen-txt {
   color: #000;
   position: relative;
@@ -365,7 +376,6 @@ input[type="checkbox"]:focus+label {
   display: inline-block;
   height: 0.8em;
   width: 100%;
-  /*  background-color: rgba(47, 142, 255, 15%);*/
   background-color: rgb(255 47 47 / 15%);
   z-index: 0;
 }
@@ -408,6 +418,10 @@ input[type="checkbox"]:focus+label {
 
 .txt-nowrap {
   white-space: nowrap;
+}
+
+.ff-pretendard {
+  font-family: 'Pretendard';
 }
 
 .warning-txt,
@@ -894,6 +908,68 @@ ul.b-list.bar li::before {
   background-color: #ededed;
 }
 
+#dialog-popup>.inner {
+  background-color: transparent;
+  color: #fff;
+  max-width: 1400px;
+  position: relative;
+  overflow: visible;
+}
+
+#dialog-popup .foot {
+  background-color: transparent;
+  border: none;
+}
+
+#dialog-popup .popup-button-next,
+#dialog-popup .popup-button-prev {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: solid 1px rgba(255, 255, 255, .3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+#dialog-popup .popup-button-next {
+  right: -40px;
+}
+
+#dialog-popup .popup-button-prev {
+  left: -40px;
+}
+
+.swiper-button-disabled {
+  opacity: .3;
+}
+
+@media (max-width:1520px) {
+
+  #dialog-popup .popup-button-next,
+  #dialog-popup .popup-button-prev {
+    top: 0;
+    transform: translateY(-100%);
+    border-radius: 0;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  #dialog-popup .popup-button-next {
+    right: 50px;
+  }
+
+  #dialog-popup .popup-button-prev {
+    left: auto;
+    right: calc(4rem + 60px);
+  }
+}
+
 /* position */
 .p-relative {
   position: relative !important;
@@ -943,7 +1019,7 @@ body *::-webkit-scrollbar-track {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-size: 15px;
 }
 
@@ -1035,7 +1111,7 @@ body *::-webkit-scrollbar-track {
 }
 
 .pagination a.on {
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: #fff;
   font-weight: 600;
 }

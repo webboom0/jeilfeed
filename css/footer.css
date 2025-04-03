@@ -2,7 +2,6 @@
 
 .footer {
   padding: 4rem 0;
-  font-size: .9em;
   background-color: #fff;
   width: 100%;
   transition: all .5s ease-in-out .1s;
@@ -18,8 +17,7 @@
 }
 
 .footer>.container {
-  padding-top: 7rem;
-  background: url(../images/logo.svg) no-repeat 0 0;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -58,16 +56,9 @@
   border: solid 1px var(--color-border)
 }
 
-@media (max-width:1320px) {
-  .footer>.container {
-    background-position: 20px 0;
-  }
-}
-
 @media (max-width:680px) {
   .footer>.container {
-    background-position-x: 50%;
-    padding-top: 5rem;
+    padding-top: 0;
   }
 
   .footer .address ul,

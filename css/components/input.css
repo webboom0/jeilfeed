@@ -13,27 +13,21 @@
   white-space: nowrap;
   width: clamp(3em, 20em, 100%);
   height: var(--size);
-  font-size: 0.875em;
+  font-size: 1em;
   font-family: var(--fontfamily);
   border-start-start-radius: var(--join-ss, var(--radius-field));
   border-start-end-radius: var(--join-se, var(--radius-field));
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
   border-color: var(--input-color);
-  box-shadow: 0 0.0625em
-      color-mix(
-        in oklab,
-        var(--input-color) calc(var(--depth) * 10%),
-        transparent
-      )
-      inset,
+  box-shadow: 0 0.0625em color-mix(in oklab,
+    var(--input-color) calc(var(--depth) * 10%),
+    transparent) inset,
     0 -0.0625em rgba(255, 255, 255, calc(var(--depth) * 0.1)) inset;
   --size: calc(var(--size-field) * 10);
-  --input-color: color-mix(
-    in oklab,
+  --input-color: color-mix(in oklab,
     var(--color-base-content) 20%,
-    transparent
-  );
+    transparent);
 }
 
 .input:where(input) {
@@ -57,12 +51,9 @@
 .input:focus,
 .input:focus-within {
   --input-color: var(--color-base-content);
-  box-shadow: 0 0.0625em
-    color-mix(
-      in oklab,
-      var(--input-color) calc(var(--depth) * 10%),
-      transparent
-    );
+  box-shadow: 0 0.0625em color-mix(in oklab,
+    var(--input-color) calc(var(--depth) * 10%),
+    transparent);
   outline: 0.125em solid var(--input-color);
   /* 2px */
   outline-offset: 0.125em;

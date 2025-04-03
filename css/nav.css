@@ -141,7 +141,6 @@
   opacity: 0;
   transform: translateY(100%);
   z-index: 2;
-  letter-spacing: -1px;
 }
 
 .gnb>ul>li:last-child .depth-2 {

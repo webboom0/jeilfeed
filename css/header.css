@@ -48,8 +48,8 @@
 
 .header .logo a {
   display: block;
-  width: 17.4rem;
-  height: 3rem;
+  width: 20rem;
+  height: 10rem;
   background: url(../images/logo.svg) no-repeat 50% 50%;
   background-size: contain;
 }

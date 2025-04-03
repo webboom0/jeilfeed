@@ -103,12 +103,18 @@ body.hdn-scroll {
   --padding: calc(var(--font-root)*5) calc(var(--font-root)*4.2);
 }
 
-.visual-section .links ul li a.primay {
-  background: linear-gradient(90deg, #004EA2 0%, #014288 100%);
+.visual-section .links ul li a.secondary {
+  background: linear-gradient(90deg, var(--color-secondary) 0%, var(--bg) 100%);
+  --bg: color-mix(in oklab,
+    var(--color-secondary, var(--color-base-200)),
+    #000 7%);
 }
 
-.visual-section .links ul li a.secondary {
-  background: linear-gradient(90deg, #E60012 0%, #AC1D28 100%);
+.visual-section .links ul li a.primay {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--bg) 100%);
+  --bg: color-mix(in oklab,
+    var(--color-primary, var(--color-base-200)),
+    #000 7%);
 }
 
 .visual-section .links ul li a .icon,
@@ -294,6 +300,26 @@ body.hdn-scroll {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  position: relative;
+}
+
+.notice-section .notice-list .subj::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: .8em;
+  top: .2em;
+  left: 0;
+  background-color: rgb(255 47 47 / 15%);
+  transition: all .5s ease-in-out 0s;
+}
+
+.notice-section .notice-list a:hover {
+  color: #000;
+}
+
+.notice-section .notice-list a:hover .subj::before {
+  width: 100%
 }
 
 .notice-section .notice-list .cont,

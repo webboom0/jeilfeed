@@ -28,6 +28,7 @@
   border-start-end-radius: var(--join-se, var(--radius-field));
   border-end-start-radius: var(--join-es, var(--radius-field));
   border-end-end-radius: var(--join-ee, var(--radius-field));
+  background-color: #fff;
 }
 
 .checkbox:before {
