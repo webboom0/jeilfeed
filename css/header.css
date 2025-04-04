@@ -166,7 +166,6 @@
 
 @media (max-width:580px) {
   .header .logo a {
-    height: 2.4rem;
-    width: 14rem;
+    width: 18rem;
   }
 }

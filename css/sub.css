@@ -406,7 +406,7 @@
   background-color: #d0d0d0;
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 50%;
   z-index: 1;
 }
 
@@ -416,7 +416,7 @@
   height: 1px;
   background-color: #d0d0d0;
   position: absolute;
-  top: calc(60% + 4rem);
+  top: calc(50% + 4rem);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -590,7 +590,7 @@
   background-size: contain;
   position: absolute;
   left: 50%;
-  top: 8rem;
+  top: 1rem;
   transform: translateX(-100%);
 }
 
@@ -602,7 +602,7 @@
   background-size: contain;
   position: absolute;
   right: 47%;
-  top: 15rem;
+  top: 13rem;
   transform: translateX(100%);
 }
 

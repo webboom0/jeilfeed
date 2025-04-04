@@ -28,19 +28,18 @@ body.hdn-scroll {
 }
 
 .visual-section .slogan {
-  font-size: 2.4cqmax;
+  font-size: 4em;
   color: #fff;
   font-weight: 500;
   padding-bottom: 20rem;
 }
 
-.visual-section.fix {
-  height: 100rem;
+.section-swiper.fix .visual-section {
+  height: 50rem;
 }
 
-.visual-section.fix .slogan {
-  font-size: 5cqmin;
-  margin-bottom: 5rem;
+.section-swiper.fix .visual-section .slogan {
+  font-size: 3em;
 }
 
 .visual-section .slogan .small {
@@ -146,6 +145,20 @@ body.hdn-scroll {
   transform: translateX(10px);
 }
 
+.section-swiper.fix .notice-section {
+  padding: 2rem 0 0;
+}
+
+.section-swiper.fix .notice-section .group {
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 1920px) {
+  .section-swiper.fix .visual-section .slogan {
+    padding-left: 10rem;
+  }
+}
+
 @media (max-width:1630px) {
   .visual-section .pagination {
     display: none;
@@ -163,24 +176,29 @@ body.hdn-scroll {
 }
 
 @media (max-width:980px) {
-  .visual-section.fix {
+  .section-swiper.fix .visual-section {
     height: auto;
     display: block;
     min-height: auto;
     padding-top: 4rem;
   }
 
-  .visual-section.fix .swiper {
+  .section-swiper.fix .visual-section .swiper {
     height: auto;
+  }
+
+  .visual-section .swiper-slide {
+    height: 400px;
   }
 
   .visual-section .slogan {
     padding-bottom: 10rem;
-    padding-top: 10rem;
+    padding-top: 15rem;
+    font-size: 4vw;
   }
 
-  .visual-section.fix .slogan {
-    margin-bottom: 0;
+  .section-swiper.fix .visual-section .slogan {
+    padding-left: 5rem;
   }
 
   .visual-section .links ul {
@@ -198,6 +216,12 @@ body.hdn-scroll {
   .visual-section .links ul li a {
     border-radius: 0;
 
+  }
+}
+
+@media (max-width:720px) {
+  .section-swiper.fix .visual-section .slogan {
+    font-size: 6vw;
   }
 }
 
@@ -244,13 +268,25 @@ body.hdn-scroll {
 
 .notice-section {
   background-color: #F2F4F6;
-  padding: 10rem 0;
+  /*  padding: 10rem 0 0;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 .notice-section>.container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.notice-section .group {
+  display: flex;
+  flex-direction: column;
   gap: 1.6rem;
+  padding-top: 8rem;
 }
 
 .notice-section .notice-group {
@@ -433,7 +469,6 @@ body.hdn-scroll {
   .notice-section {
     font-size: 14px;
     padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .notice-section>.container {
@@ -453,6 +488,11 @@ body.hdn-scroll {
   .notice-section .notice-group>* {
     width: 100%;
   }
+
+  .section-swiper.fix .notice-section .group {
+    padding-top: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 @media (max-width:520px) {
@@ -460,3 +500,5 @@ body.hdn-scroll {
     display: none;
   }
 }
+
+ 
