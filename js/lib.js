@@ -251,6 +251,7 @@ const scrollTab = {
 
     // this.active(btn);
     $("body,html").animate({ scrollTop: top }, 500);
+    // window.scrollTo({top:0, left:0, behavior:"smooth"})
   },
   scrollHandler(e) {
     const scrollTop = $(window).scrollTop();

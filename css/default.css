@@ -113,11 +113,13 @@ body {
 }
 
 body.scroll-hdn,
-body.modal {
+body.modal,
+body.sideMenuOpen {
   overflow: hidden;
 }
 
-body.modal::after {
+body.modal::after,
+.modal-box {
   content: "";
   position: fixed;
   top: 0;

@@ -343,15 +343,21 @@
         sectionSwiperElement.classList.remove("swiper");
         sectionSwiperElement.children[0].classList.remove("swiper-wrapper");
         Array.from(sectionSwiperElement.children[0].children).forEach(child => child.classList.remove("swiper-slide"));
-        header.classList.remove("transparent");
-        // footer.classList.remove("fixed");
         body.classList.remove("hdn-scroll");
         sectionSwiperElement.classList.add("fix");
+        header.classList.add("transparent");
         if (sectionSwiperCheck()) sectionSwiper.destroy(true, true);
+        window.addEventListener("scroll", function(event) {
+          console.log(document.querySelector("html").scrollTop)
+          if (document.querySelector("html").scrollTop > 100) {
+            header.classList.remove("transparent");
+          } else {
+            header.classList.add("transparent");
+          }
+        })
       } else {
         body.classList.add("hdn-scroll");
         header.classList.add("transparent");
-        // footer.classList.add("fixed");
         sectionSwiperElement.classList.remove("fix");
         if (!sectionSwiperCheck()) {
           sectionSwiperElement.classList.add("swiper");
@@ -376,24 +382,23 @@
           });
         }
 
-        const noticeSection = document.querySelector('.notice-section');
-        let scrollEnd = false;
-        window.addEventListener('wheel', function(event) {
-          if (event.deltaY > 0) {
-            if (event.target.closest(".notice-section")) {
-              // footer.style.transform = "translateY(0)";
-              scrollEnd = true;
-            }
-          } else {
-            if (scrollEnd) {
-              sectionSwiper.slideTo(1);
-              // footer.style.transform = "translateY(100%)";
-              scrollEnd = false;
-            } else {
-              sectionSwiper.slideTo(0);
-            }
-          }
-        });
+
+        // const noticeSection = document.querySelector('.notice-section');
+        // let scrollEnd = false;
+        // window.addEventListener('wheel', function(event) {
+        // if (event.deltaY > 0) {
+        // if (event.target.closest(".notice-section")) {
+        // scrollEnd = true;
+        // }
+        // } else {
+        // if (scrollEnd) {
+        // sectionSwiper.slideTo(1);
+        // scrollEnd = false;
+        // } else {
+        // sectionSwiper.slideTo(0);
+        // }
+        // }
+        // });
       }
     }
 

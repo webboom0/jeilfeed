@@ -177,10 +177,9 @@ body.hdn-scroll {
 
 @media (max-width:980px) {
   .section-swiper.fix .visual-section {
-    height: auto;
+    height: auto !important;
     display: block;
     min-height: auto;
-    padding-top: 4rem;
   }
 
   .section-swiper.fix .visual-section .swiper {
@@ -189,6 +188,7 @@ body.hdn-scroll {
 
   .visual-section .swiper-slide {
     height: 400px;
+    padding-top: 4rem;
   }
 
   .visual-section .slogan {

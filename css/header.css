@@ -37,6 +37,7 @@
   color: #fff;
   background-color: transparent;
   border-bottom: solid 1px rgba(255, 255, 255, .3);
+  z-index: 11;
 }
 
 .header .container {

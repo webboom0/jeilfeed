@@ -10,6 +10,17 @@
   height: 100%;
 }
 
+header.gnbActive:not(.allMenuActive)::after {
+  content: "";
+  position: fixed;
+  top: var(--height);
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
 .gnb.active>ul>li:first-child .depth-2,
 .gnb.allMenuActive>ul>li:first-child .depth-2 {
   border-radius: 0 0 0 var(--radius);

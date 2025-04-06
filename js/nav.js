@@ -34,6 +34,7 @@ const gnb = {
       if (gnb.mode === "pc") {
         gnbElement.classList.add("active");
         document.querySelector(".header").classList.add("gnbActive");
+        document.body.classList.add("scroll-hdn");
         gnb.set();
       }
     }
@@ -42,6 +43,7 @@ const gnb = {
       if (gnb.mode === "pc") {
         gnbElement.classList.remove("active");
         document.querySelector(".header").classList.remove("gnbActive");
+        document.body.classList.remove("scroll-hdn");
       }
     }
 
@@ -93,7 +95,7 @@ const gnb = {
     //  사이드 메뉴 닫기
     document.querySelectorAll(".sideMenuCloseBtn").forEach((btn) => {
       btn.addEventListener("click", function() {
-        document.body.classList.remove("sideMenuOpen", "modal");
+        gnb.close();
       });
     });
 
@@ -152,6 +154,10 @@ const gnb = {
         element.style.removeProperty("margin-bottom");
       }, duration);
     }
+  },
+  close: function() {
+    document.body.classList.remove("sideMenuOpen");
+    document.querySelector(".modal-box").remove();
   },
   set: function() {
     const gnbElement = document.querySelector(this.gnbEl);
@@ -217,6 +223,16 @@ const gnb = {
 
     gnbElement.classList.remove("active");
   },
+  addModal: function(contain) {
+    if (document.querySelectorAll(".modal-box").length <= 0) {
+      const modal = document.createElement("div");
+      modal.classList.add("modal-box")
+      modal.addEventListener("click", function() {
+        gnb.close();
+      });
+      document.querySelector(contain).append(modal);
+    }
+  }
 };
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -226,7 +242,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // 사이드 메뉴 활성화
   document.querySelectorAll(".sideMenuBtn").forEach((btn) => {
     btn.addEventListener("click", function(e) {
-      document.body.classList.add("sideMenuOpen", "modal");
+      document.body.classList.add("sideMenuOpen");
+      gnb.addModal(".header");
       document.querySelectorAll("#gnb .etcMenu").forEach((el) => el.remove());
       const etcMenu = document.querySelector(".header .etcMenu");
       if (etcMenu) {
@@ -256,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       gnb.mode = "pc";
       document.body.className = ""; // 모든 클래스 제거
-      document.body.classList.remove("modal");
+      if (document.querySelector(".modal-box")) document.querySelector(".modal-box").remove(); // modal 요소 삭제
       gnb.set();
     }
     gnb.reset();
