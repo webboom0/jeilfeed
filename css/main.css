@@ -459,7 +459,7 @@ body.hdn-scroll {
   display: none;
 }
 
-@media (min-height:980px) {
+@media (min-height:890px) {
   .section-swiper.fix .visual-section {
     height: 100vh;
   }
