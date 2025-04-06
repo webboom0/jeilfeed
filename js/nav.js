@@ -34,7 +34,8 @@ const gnb = {
       if (gnb.mode === "pc") {
         gnbElement.classList.add("active");
         document.querySelector(".header").classList.add("gnbActive");
-        document.body.classList.add("scroll-hdn");
+        if (!document.querySelector("header").classList.contains("allMenuActive"))
+          document.body.classList.add("scroll-hdn");
         gnb.set();
       }
     }
@@ -43,7 +44,8 @@ const gnb = {
       if (gnb.mode === "pc") {
         gnbElement.classList.remove("active");
         document.querySelector(".header").classList.remove("gnbActive");
-        document.body.classList.remove("scroll-hdn");
+        if (!document.querySelector("header").classList.contains("allMenuActive"))
+          document.body.classList.remove("scroll-hdn");
       }
     }
 
