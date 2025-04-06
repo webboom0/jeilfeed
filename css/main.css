@@ -459,6 +459,13 @@ body.hdn-scroll {
   display: none;
 }
 
+@media (min-height:980px) {
+  .section-swiper.fix .visual-section {
+    height: 100vh;
+  }
+
+}
+
 @media (max-width:1280px) {
   .notice-section {
     font-size: 14px;
