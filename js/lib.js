@@ -309,27 +309,46 @@ const dropMenu = {
         el.innerHTML = "열기";
         item.querySelector(dropMenu.btn).appendChild(el);
       }
+      if (item.getAttribute("data-event") === "hover") {
+        item.querySelector(dropMenu.btn).addEventListener("mouseenter", dropMenu.dropMenuOpen_hover);
+        item.addEventListener("mouseleave", dropMenu.dropMenuClose);
+      } else {
+        item.querySelector(dropMenu.btn).addEventListener("click", dropMenu.dropMenuOpen);
+      }
 
-      item.querySelector(dropMenu.btn).addEventListener("click", (e) => {
-        const $target = e.currentTarget;
-        dropMenu.actvieMenu = e.target.closest(dropMenu.wrap);
-
-        // 선택된 드롭메뉴 토글기능
-        if (!dropMenu.actvieMenu.classList.contains("active")) {
-          dropMenu.dropMenuClose();
-          dropMenu.actvieMenu.classList.add("active");
-          $target.querySelector("span").textContent = "닫기";
-        } else {
-          dropMenu.actvieMenu.classList.remove("active");
-          $target.querySelector("span").textContent = "열기";
-        }
-      });
     });
     document.addEventListener("click", (e) => {
       if (!e.target.closest(dropMenu.wrap)) {
         dropMenu.dropMenuClose();
       }
     });
+  },
+  dropMenuOpen_hover: (e) => {
+    console.log(e)
+    e.preventDefault();
+    const $target = e.currentTarget;
+    dropMenu.actvieMenu = e.target.closest(dropMenu.wrap);
+
+    if (!dropMenu.actvieMenu.classList.contains("active")) {
+      dropMenu.dropMenuClose();
+      dropMenu.actvieMenu.classList.add("active");
+      $target.querySelector("span").textContent = "닫기";
+    }
+  },
+  dropMenuOpen: (e) => {
+    e.preventDefault();
+    const $target = e.currentTarget;
+    dropMenu.actvieMenu = e.target.closest(dropMenu.wrap);
+
+    // 선택된 드롭메뉴 토글기능
+    if (!dropMenu.actvieMenu.classList.contains("active")) {
+      dropMenu.dropMenuClose();
+      dropMenu.actvieMenu.classList.add("active");
+      $target.querySelector("span").textContent = "닫기";
+    } else {
+      dropMenu.actvieMenu.classList.remove("active");
+      $target.querySelector("span").textContent = "열기";
+    }
   },
   dropMenuClose: () => {
     const $dropMenus = document.querySelectorAll(dropMenu.wrap + ".active");
