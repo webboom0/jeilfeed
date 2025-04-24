@@ -324,7 +324,6 @@ const dropMenu = {
     });
   },
   dropMenuOpen_hover: (e) => {
-    console.log(e)
     e.preventDefault();
     const $target = e.currentTarget;
     dropMenu.actvieMenu = e.target.closest(dropMenu.wrap);
